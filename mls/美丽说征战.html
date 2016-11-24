@@ -1,0 +1,917 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/base.css" rel="stylesheet">
+<style>
+.header{ width:1220px; height:39px; background:#f5f5f5; border-bottom:1px solid #eeeeee; margin:0 auto;}
+.header ul{ float:right; margin-top:11px;}
+.header li{ float:left;padding:0 15px; border-left:1px dotted #ccc; margin-left:-1px;}
+.header ul .s{ border-left:0;}
+.header a{color:#666; font-size:12px; }
+.header .a1{ display:block;width:16px; height:16px; background: url(img/i_wx_single.png) no-repeat;float:left; padding-right:3px; line-height:16px;}
+.header .a2{ display:block;width:15px; height:16px; background:url(img/mls_global140607.png) -189px -21px; float:left; padding-right:3px; line-height:16px;}
+.header .a5{ display:block;width:15px; height:16px; background:url(img/mls_global140607.png) -192px -45px; float:left; padding-right:4px; line-height:16px;}
+.header .a6{ display:block;width:13px; height:15px; background:url(img/mls_global140607.png) -223px -45px; float:left; padding-right:9px; line-height:16px;}
+.header .a7{ display:block;width:10px; height:16px; background:url(img/mls_global140607.png) -171px -45px; float:left; padding-right:9px; line-height:16px;}
+.logo{ width:1220px; height:66px; margin:0 auto;}
+h1{ width:160px; height:36px; background:url(img/logo_n4.png) no-repeat; float:left; text-indent:-999em;margin:15px 0 15px 10px;}
+.logo .b2{ margin:17px 386px 15px 0;}
+.logo .b3{width:371px;height:29px; border:2px solid #ff6699; float:left; font-size:12px; color:#a9a9a9;}
+.logo .b4{color: #FFF; width:92px;height:33px; background:#ff6699; font-size:14px;border:none;}
+.search{ width:1220px;margin:0 auto; background:#ff6599;}
+li{ float:left;}
+.search .ser-1 a{font-size:14px; color:#fff;line-height:40px; font-weight:bold; padding:13px 15px 13px 14px;}
+.search .ser-2{ margin-left:136px;}
+.search a:hover{ background:#ed3577;}
+.d{ width:1220px;margin:0 auto;}
+.d .left-1{ width:238px; height:575px; border:1px solid #e6e6e6; float:left; margin-left:10px;}
+.d .left-1 ul{ margin-left:20px;width:178px; height:103px;border-bottom:1px dotted #cbcbcb; position:relative; margin-top:12px;}
+.d .left-2 .re{ width:15px; height:17px; background:url(img/biao.png) no-repeat; font-size:16px; color:#ff7da8; font-weight:bold; padding-left:22px;}
+.d .left-2 h3{ margin-top:12px; margin-bottom:14px;}
+.d .left-2 span{ font-size:12px; color:#666666; margin-right:15px;}
+.d .left-2 .l-1{ color:#ff6699;}
+.d .left-2 li{ margin-bottom:12px;}
+.d .left-2 .b1{ position:absolute; left:196px; top:51px;}
+
+.d .left-3 .re{ width:15px; height:17px; background:url(img/biao.png) no-repeat; font-size:16px; color:#ff7da8; font-weight:bold; padding-left:22px;}
+.d .left-3 h3{ margin-top:12px; margin-bottom:14px;}
+.d .left-3 span{ font-size:12px; color:#666666; margin-right:15px;}
+.d .left-3 .l-1{ color:#ff6699;}
+.d .left-3 li{ margin-bottom:12px;}
+.d .left-3 .b1{ position:absolute; left:196px; top:51px;}
+.d .left-1 .left-3{ border-bottom:none;}
+.d .right-1 .r-top{ width:961px; float:left;}
+.d .right-1 .top-1 li{ float:left; border-bottom:1px solid #e6e6e6;}
+.d .right-1 .r-bottom li{ width:175px; height:142px; border:1px solid #e6e6e6;float:left; padding:0 10px 0 11px; margin-right:-10px;}
+.d .right-1 .r-bottom ul{ padding-top:13px;}
+.rq { width:1200px; margin:0 auto;}
+.rq .bt span{ display:block; width:157px; height:25px; background:url(img/wel_ico2.png) no-repeat 0 0; margin-top:20px;padding-bottom:7px;}
+.rq .bt{ width:1200px; border-bottom:1px solid #e6e6e6;}
+.rq .d1 ul{ padding-top:15px; height:352px; margin-right:-30px;}
+.rq .d1 li .mei{margin-top:9px; font-size:12px; color:#666666; margin-bottom:17px;}
+.rq .d1 li .shu{ font-size:12px; color:#ff66a8;}
+.rq .d1 li .shu2{ color:#999999; text-decoration:line-through;}
+.rq .d1 li .xian{ border-bottom:1px dotted #cbcbcb; margin-top:12px;}
+.rq .d1 li .mai{ font-size:12px; color:#666666; margin-top:10px;}
+.rq .d1 ul .md-a{float:left;width:180px; height:346px;}
+.rq .d1 ul li{margin-right:25px; margin-bottom:10px;}
+.tg{ width:1200px; margin:0 auto;}
+.tg .tg-bt .left-bt{display:block; width:157px; height:25px; background:url(img/wel_ico2.png) no-repeat -1px -240px; margin-top:20px;padding-bottom:7px; float:left;}
+.tg .right-bt a{ font-size:14px; color:#999999; float:right; margin-top:25px;}
+.tg .tg-bt{ width:1200px; height:60px; border-bottom:1px solid #e6e6e6; padding-bottom:17px;}
+.tg .d1 ul{ padding-top:15px; height:352px; margin-right:-30px;}
+.tg .d1 li .mei{margin-top:9px; font-size:12px; color:#666666; margin-bottom:17px;}
+.tg .d1 li .shu{ font-size:12px; color:#ff66a8;}
+.tg .d1 li .shu2{ color:#999999; text-decoration:line-through;}
+.tg .d1 li .xian{ border-bottom:1px dotted #cbcbcb; margin-top:12px;}
+.tg .d1 li .mai{ font-size:12px; color:#666666; margin-top:10px;}
+.tg .d1 ul .md-a{float:left;width:180px; height:346px;}
+.tg .d1 ul li{margin-right:25px; margin-bottom:10px;}
+.heng{ width:1200px; height:100px; margin:0 auto; margin-top:41px;}
+.yf{ width:1200px; margin:0 auto; border-bottom:1px solid #e6e6e6;}
+.yf .left-bt{display:block; width:77px; height:22px; background:url(img/wel_ico2.png) no-repeat 0 -44px; margin-top:20px;padding-bottom:7px; float:left; margin-right:12px;}
+.yf .yf-bt .left-bt2{ font-size:14px; color:#999999; border-left:1px dotted #cccccc; margin-top:25px;}
+.yf .yf-bt .right-bt a{ font-size:14px; color:#999999; float:right; margin-top:25px;}
+.yf .yf-bt{width:1200px; height:60px; border-bottom:1px solid #e6e6e6;}
+.yf .yf-bot .yf-lt{ width:940px; height:614px;border-right:1px solid #e6e6e6;}
+.yf .yf-bot .aa{ width:940px;}
+.yf .yf-bot .aa .lan{ width:180px; height:255px;}
+.yf .yf-bot .yf-lt .aa1{padding:20px 5px 5px 0;}
+.yf .yf-bot .yf-lt .aa2{ padding:5px 5px 5px 0;}
+.yf .yf-bot .yf-lt .bb1{ width:940px;}
+.yf .yf-bot .yf-lt .bb1 .top-zi{ width:280px;border-right:1px dotted #cccccc;}
+.yf .yf-bot .yf-lt .bb1 .shangy{font-size:16px; color:#f69; margin:25px 24px 0 14px;}
+.yf .yf-bot .yf-lt .bb1 .shang{font-size:16px; color:#f69; margin:25px 24px 0 14px;}
+.yf .yf-bot .yf-lt .bb1 .bei{ font-size:12px; color:#666666; margin-top:13px; line-height:22px;}
+.yf .yf-bot .yf-lt .bb1 .bei p{ margin-right:10px;}
+.yf .yf-bot .yf-right .zong{ width:239px; margin-left:20px; margin-top:20px;}
+.yf .yf-bot .yf-right .zong .b1{ display:block;font-size:16px; color:#666666; font-weight:bold;}
+.yf .yf-bot .yf-right .zong .b2{ display:block;font-size:14px; color:#999999;}
+.yf .yf-bot .yf-right .zong .r-zi .tu{ margin-right:12px;}
+.yf .yf-bot .yf-right .zong .r-zi .p1{ font-size:12px; color:#666666; margin-bottom:8px;}
+.yf .yf-bot .yf-right .zong .r-zi .p2{ font-size:12px; color:#999999; margin-bottom:13px;}
+.yf .yf-bot .yf-right .zong .r-zi{ width:239px;border-bottom:1px dotted #cccccc; margin-top:14px;}
+.yf .yf-bot .yf-right .zong .r-zi2 .tu{ margin-right:12px;}
+.yf .yf-bot .yf-right .zong .r-zi2 .p1{ font-size:12px; color:#666666; margin-bottom:8px;}
+.yf .yf-bot .yf-right .zong .r-zi2 .p2{ font-size:12px; color:#999999; margin-bottom:13px;}
+.yf .yf-bot .yf-right .zong .r-zi2{ width:239px;border-bottom:none; margin-top:14px;}
+.yf .left-bto{display:block; width:77px; height:22px; background:url(img/wel_ico2.png) no-repeat 0 -82px; margin-top:20px;padding-bottom:7px; float:left; margin-right:12px;}
+.yf .left-btoo{display:block; width:77px; height:22px; background:url(img/wel_ico2.png) no-repeat 0 -120px; margin-top:20px;padding-bottom:7px; float:left; margin-right:12px;}
+.yf .left-btooo{display:block; width:73px; height:26px; background:url(img/wel_ico2.png) no-repeat 0 -158px; margin-top:20px;padding-bottom:7px; float:left; margin-right:12px;}
+.cloth{ width:1200px; margin:0 auto;}
+.cloth .rm{ display:block; width:115px; height:21px; background:url(img/wel_ico2.png) -1px -201px; margin-top:20px; padding-bottom:15px;}
+.cloth ul li{border-right:1px dotted #ccc;}
+.cloth ul a{ font-size:14px; color:#999999; margin-left:17px; margin-right:14px;}
+.cloth .rm-1{ margin-top:21px; margin-bottom:19px;}
+.lw{ width:1200px; margin:0 auto;}
+.lw .lw-1{ width:226px; height:283px; border:1px solid #dddddd; margin-right:12px;}
+.lw .lw-1 a{ display:block;font-size:14px; color:#666666; font-weight:bold;margin-top:12px; margin-left:13px; margin-bottom:11px;}
+.lw .lw-1 img{ margin-left:13px; margin-bottom:17px;}
+.lw .lw-1 .p1{ margin-left:13px; font-size:12px; color:#999999;}
+.lw .lw-1 p .sp-2{ font-size:12px; color:#fff; padding:4px 15px 4px 14px; background:#ff6699;}
+.footer{ width:1220px; height:100%; margin:0 auto;margin-top:20px;border-top:1px solid #dddddd; background:#f5f5f5;}
+.footer .ft-1{ margin-top:33px; margin-left:11px; margin-right:55px;}
+.footer .ft-1 .dianhua{ display:block;width:34px; height:35px; background:url(img/mls_global140607.png) -1px -114px; margin-right:13px;}
+.footer .ft-1 .dh p{ font-size:14px; color:#666666; margin-bottom:10px;}
+.footer .fo{margin-top:33px; margin-right:57px;}
+.footer .fo h3{ font-size:16px; color:#666666; font-weight:bold; margin-bottom:20px;}
+.footer .fo p{ font-size:12px; color:#666; margin-bottom:14px;}
+.footer .fo .xl{ display:block; width:16px; height:16px; background:url(img/mls_global140607.png) no-repeat 0 -21px;}
+.footer .fo .qq{ display:block; width:16px; height:16px; background:url(img/mls_global140607.png) no-repeat -73px -21px;}
+.footer .fo .tx{ display:block; width:16px; height:16px; background:url(img/mls_global140607.png) no-repeat -49px -21px;}
+.footer .foot-2{width:1200px; margin:0 auto; border-top:1px solid #e6e6e6; }
+.footer .foot-2 .footer-2{border-bottom:1px solid #e6e6e6;}
+.footer .foot-2 .footer-2 li{ font-size:12px; color:#666; margin-bottom:9px; margin-top:9px;}
+.footer .foot-3 p{ font-size:12px; color:#666; margin-left:10px; margin-bottom:10px;}
+</style>
+</head>
+<body>
+ <div class="header">
+	<ul class="clearfix fl">
+    	<li class="s"><a href="#"><span class="a1"></span>微信登陆</a></li>
+        <li><a href="#"><span class="a2"></span>QQ登陆</a></li>
+        <li><a href="#">登陆</a></li>
+        <li><a href="#">注册</a></li>
+        <li><a href="#"><span class="a5"></span>我的购物车</a></li>
+        <li><a href="#"><span class="a6"></span>我的订单</a></li>
+        <li><a href="#"><span class="a7"></span>下载APP</a></li>
+        <li><a href="#">客户服务</a></li>
+    </ul> 
+ </div>
+ <div class="logo clearfix">
+	<div class="b1 fl">
+    	<h1>美丽说</h1>
+    </div>
+    <div class="b2 fr">
+    	<input class="b3" type="text" value="搜索流行商品" />
+        <input class="b4" type="button" value="搜索">
+    </div>
+ </div>
+ <div class="search clearfix">
+ 	<ul class="ser-1 fl ">
+    	<li class="ser-2"><a href="#">首页</a></li>
+        <li><a href="#">今日最热</a></li>
+        <li><a href="#">衣服</a></li>
+        <li><a href="#">鞋子</a></li>
+        <li><a href="#">包包</a></li>
+        <li><a href="#">配饰</a></li>
+        <li><a href="#">美妆</a></li>
+        <li><a href="#">特卖</a></li>
+        <li><a href="#">团购</a></li>
+        <li><a href="#">好店</a></li>
+        <li><a href="#">杂志</a></li>
+        <li><a href="#">爱美丽Club</a></li>
+    </ul>
+ </div>
+ <div class="d clearfix">
+	<div class="left-1 fl">
+    	<ul class="left-2"> 
+        	<li><a  class="re" href="#">最热</a></li>
+        	<li><a href="#"><span>冬季新品</span><span class="l-1">毛衣</span><span>活力运动鞋</span></a><img class="b1" src="img/youjiao.png"/></li>
+            <li><a href="#"><span>连衣裙</span><span class="l-1">新款靴子</span><span>单肩包</span></a></li>
+            <li class="re-2"><a href="#"><span>暖冬美裤</span><span>外套</span><span class="l-1">入冬打底裤</span></a></li>
+        </ul>
+        <ul class="left-2"> 
+        	<li><a  class="re" href="#">衣服</a></li>
+        	<li><a href="#"><span>卫衣</span><span class="l-1">开衫</span><span>大衣</span><span>小脚裤</span></a><img class="b1" src="img/youjiao.png"/></li>
+            <li><a href="#"><span>牛仔裤</span><span class="l-1">半身裙</span><span>长袖连衣裙</span></a></li>
+            <li class="re-2"><a href="#"><span>打底裤</span><span>秋冬美裙</span><span class="l-1">打底衫</span></a></li>
+        </ul>
+        <ul class="left-2"> 
+        	<li><a  class="re" href="#">鞋子</a></li>
+        	<li><a href="#"><span>鞋子</span><span class="l-1">短靴</span><span>长靴</span><span>雪地靴</span></a><img class="b1" src="img/youjiao.png"/></li>
+            <li><a href="#"><span>运动裤</span><span class="l-1">高跟鞋</span><span>秋冬美裤</span></a></li>
+            <li class="re-2"><a href="#"><span>优质热销鞋履</span><span>过膝靴</span><span class="l-1">马丁靴</span></a></li>
+        </ul>
+         <ul class="left-2"> 
+        	<li><a  class="re" href="#">包包</a></li>
+        	<li><a href="#"><span>新款包包</span><span class="l-1">双肩包</span><span>行李箱</span></a><img class="b1" src="img/youjiao.png"/></li>
+            <li><a href="#"><span>超人气必败潮包</span><span class="l-1">大包</span><span>钱包</span></a></li>
+            <li class="re-2"><a href="#"><span>单肩包</span><span>手提包</span><span class="l-1">小包</span><span>斜挎包</span></a></li>
+        </ul>
+        <ul class="left-3"> 
+        	<li><a  class="re" href="#">配饰</a></li>
+        	<li><a href="#"><span>围巾</span><span class="l-1">帽子</span><span>项链</span><span>手机壳</span></a><img class="b1" src="img/youjiao.png"/></li>
+            <li><a href="#"><span>耳钉</span><span class="l-1">手链</span><span>发箍</span><span>手表</span></a></li>
+            <li class="re-2"><a href="#"><span>连裤袜</span><span>袜子</span><span class="l-1">丝巾</span><span>腰带</span></a></li>
+        </ul>
+    </div>
+     <div class="right-1 fl clearfix">
+    	<div class="r-top clearfix">
+        	<div class="top-l fl clearfix">
+            	<ul class="fl clearfix">
+                	<li><img src="img/linzhiling.png"/></li>
+                    <li class="top-a fl ">
+                    	<img src="img/5f8663325e2869e65bf2722db221_200_139.cg.jpg"/>
+                        <img src="img/c8ef6839d95786830ebf46c5d7b6_200_139.cf.jpg"/>
+                        <img src="img/63ca018fb1b5a17a64118d45df5a_200_139.cf.jpg"/>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="r-bottom clearfix">
+        	<ul class="clearfix fl">
+            	<li><img src="img/e4563da0edb81d3d0e558306a5e8_175_142.cg.jpg"/></li>
+                <li><img src="img/f878a1fea7aa29e493bdaad44324_175_142.cf.jpg"/></li>
+                <li><img src="img/134808f537c26dcdb9faf67662b6_175_142.cg.jpg"/></li>
+                <li><img src="img/7a2b7f45d813c0ccbe840e086c87_175_142.cf.jpg"/></li>
+                <li><img src="img/98495ea9f28135426810ac6c263b_198_142.ch.jpg"/></li>
+            </ul>
+        </div>
+    </div>
+ </div>
+ <div class="rq">
+ 	<div class="bt">
+    	<span></span>
+    </div>
+    <div class="d1 clearfix">
+    	<ul class="clearfix">
+        	<li class=" md-a fl">
+                <span class="tu"><img src="img/267778da94332bcf9572ededaddc_640_900.cf.jpg_d3639f8a_s2_180_255.jpg" /></span>
+                <p class="mei">美丽无上线 不到50元</p>
+                <p class="shu">&yen;49.00&nbsp;<span class="shu2">&yen;189.00</span></p>
+                <p class="xian"></p>
+                <p class="mai">1885人已经购买</p>
+            </li>
+            <li>
+                <span class="tu"><img src="img/675d4d54bc96d9b6892336bc6d6f_650_975.cc.jpg_37369464_s2_180_255.jpg" /></span>
+                <p class="mei">美丽无上线 不到50元</p>
+                <p class="shu">&yen;49.00&nbsp;<span class="shu2">&yen;189.00</span></p>
+                <p class="xian"></p>
+                <p class="mai">1885人已经购买</p>
+            </li>
+            <li>
+                <span class="tu"><img src="img/8a6098460645ded183aa1a6d9077_640_900.cf.jpg_ab011515_s2_180_255.jpg"/></span>
+                <p class="mei">美丽无上线 不到50元</p>
+                <p class="shu">&yen;49.00&nbsp;<span class="shu2">&yen;189.00</span></p>
+                <p class="xian"></p>
+                <p class="mai">1885人已经购买</p>
+            </li>
+            <li>
+                <span class="tu"><img src="img/f031452afdfc8488b04bdc06d649_640_900.cg.jpg_c289ef4d_s2_180_255.jpg" /></span>
+                <p class="mei">美丽无上线 不到50元</p>
+                <p class="shu">&yen;49.00&nbsp;<span class="shu2">&yen;189.00</span></p>
+                <p class="xian"></p>
+                <p class="mai">1885人已经购买</p>
+            </li>
+            <li>
+                <span class="tu"><img src="img/2f7f7de25e1a2d8f34b3d98299fa_640_900.cc.jpg_0e8a693f_s2_180_255.jpg"/></span>
+                <p class="mei">美丽无上线 不到50元</p>
+                <p class="shu">&yen;49.00&nbsp;<span class="shu2">&yen;189.00</span></p>
+                <p class="xian"></p>
+                <p class="mai">1885人已经购买</p>
+            </li>
+            <li>
+                <span class="tu"><img src="img/522931625b5df7051f90c157b36c_640_960.cg.jpg_f8771cbf_s2_180_255.jpg"/></span>
+                <p class="mei">美丽无上线 不到50元</p>
+                <p class="shu">&yen;49.00&nbsp;<span class="shu2">&yen;189.00</span></p>
+                <p class="xian"></p>
+                <p class="mai">1885人已经购买</p>
+            </li>
+            <li class=" md-a fl">
+                <span class="tu"><img src="img/7dc62984bdb80bdb0aa665812f55_640_900.c8.jpg_c0c5c696_s2_180_255.jpg"/></span>
+                <p class="mei">美丽无上线 不到50元</p>
+                <p class="shu">&yen;49.00&nbsp;<span class="shu2">&yen;189.00</span></p>
+                <p class="xian"></p>
+                <p class="mai">1885人已经购买</p>
+            </li>
+            <li>
+                <span class="tu"><img src="img/7b52f050ad604f8eecc682aaec32_640_900.c6.jpg_4a2267ea_s2_180_255.jpg"/></span>
+                <p class="mei">美丽无上线 不到50元</p>
+                <p class="shu">&yen;49.00&nbsp;<span class="shu2">&yen;189.00</span></p>
+                <p class="xian"></p>
+                <p class="mai">1885人已经购买</p>
+            </li>
+            <li>
+                <span class="tu"><img src="img/c95fb4423a3bb24b94a87b281544_640_832.cf.jpg_21edab6f_s2_180_255.jpg"/></span>
+                <p class="mei">美丽无上线 不到50元</p>
+                <p class="shu">&yen;49.00&nbsp;<span class="shu2">&yen;189.00</span></p>
+                <p class="xian"></p>
+                <p class="mai">1885人已经购买</p>
+            </li>
+            <li>
+                <span class="tu"><img src="img/e73ca368bee3a640c89e82c6e7c8_640_900.c8.jpg_aa2c3c34_s2_180_255.jpg"/></span>
+                <p class="mei">美丽无上线 不到50元</p>
+                <p class="shu">&yen;49.00&nbsp;<span class="shu2">&yen;189.00</span></p>
+                <p class="xian"></p>
+                <p class="mai">1885人已经购买</p>
+            </li>
+            <li>
+                <span class="tu"><img src="img/8f189f9cfbbd144f9a229819ff17_640_900.cc.jpg_29725157_s2_180_255.jpg"/></span>
+                <p class="mei">美丽无上线 不到50元</p>
+                <p class="shu">&yen;49.00&nbsp;<span class="shu2">&yen;189.00</span></p>
+                <p class="xian"></p>
+                <p class="mai">1885人已经购买</p>
+            </li>
+            <li>
+                <span class="tu"><img src="img/c9aff7dc940bb716c66fddd0cc01_640_832.cf.jpg_f4023743_s2_180_255.jpg" /></span>
+                <p class="mei">美丽无上线 不到50元</p>
+                <p class="shu">&yen;49.00&nbsp;<span class="shu2">&yen;189.00</span></p>
+                <p class="xian"></p>
+                <p class="mai">1885人已经购买</p>
+            </li>
+        </ul>
+    </div>
+ </div>
+ <div class="tg clearfix">
+ 	<div class="tg-bt clearfix">
+    	<span class="left-bt fl"></span>
+        <span class="right-bt fr"><a href="#">查看所有团购&gt;</a></span>
+    </div>
+     <div class="d1 clearfix">
+    	<ul class="clearfix">
+            <li class=" md-a fl">
+                <span class="tu"><img src="img/ffaf5416e4ecb51f79413b20fd4e_640_832.cc.jpg_04e0a2b5_s2_180_255.jpg"/></span>
+                <p class="mei">美丽无上线 不到50元</p>
+                <p class="shu">&yen;49.00&nbsp;<span class="shu2">&yen;189.00</span></p>
+                <p class="xian"></p>
+                <p class="mai">1885人已经购买</p>
+            </li>
+            <li>
+                <span class="tu"><img src="img/ff591cdb463fd28af5af2fef6001_640_900.ch.jpg_ae011f38_s2_180_255.jpg"/></span>
+                <p class="mei">美丽无上线 不到50元</p>
+                <p class="shu">&yen;49.00&nbsp;<span class="shu2">&yen;189.00</span></p>
+                <p class="xian"></p>
+                <p class="mai">1885人已经购买</p>
+            </li>
+            <li>
+                <span class="tu"><img src="img/bf38eea4d89c4483b46afca76e97_640_900.ch.jpg_01e9db14_s2_180_255.jpg"/></span>
+                <p class="mei">美丽无上线 不到50元</p>
+                <p class="shu">&yen;49.00&nbsp;<span class="shu2">&yen;189.00</span></p>
+                <p class="xian"></p>
+                <p class="mai">1885人已经购买</p>
+            </li>
+            <li>
+                <span class="tu"><img src="img/0ee115d65a61831c540e5630c3d2_640_842.cg.jpg_7b7865d4_s2_180_255.jpg"/></span>
+                <p class="mei">美丽无上线 不到50元</p>
+                <p class="shu">&yen;49.00&nbsp;<span class="shu2">&yen;189.00</span></p>
+                <p class="xian"></p>
+                <p class="mai">1885人已经购买</p>
+            </li>
+            <li>
+                <span class="tu"><img src="img/f70cf473e26bf57d33f28ee04cfe_640_960.cg.jpg_28bebea1_s2_180_255.jpg"/></span>
+                <p class="mei">美丽无上线 不到50元</p>
+                <p class="shu">&yen;49.00&nbsp;<span class="shu2">&yen;189.00</span></p>
+                <p class="xian"></p>
+                <p class="mai">1885人已经购买</p>
+            </li>
+            <li>
+                <span class="tu"><img src="img/bfe6da839a60eac1e20bb4f79b5f_640_900.ch.jpg_ee608ff2_s2_180_255.jpg" /></span>
+                <p class="mei">美丽无上线 不到50元</p>
+                <p class="shu">&yen;49.00&nbsp;<span class="shu2">&yen;189.00</span></p>
+                <p class="xian"></p>
+                <p class="mai">1885人已经购买</p>
+            </li>
+        </ul>
+    </div>
+ </div>
+ <div class="heng">
+ 	<img src="img/chang.png"/>
+ </div>
+ <div class="yf">
+ 	<div class="yf-bt clearfix">
+    	<span class="left-bt fl"></span><span class="left-bt2 fl">&nbsp;今日上新4098件</span>
+        <span class="right-bt fr"><a href="#">查看所有衣服&gt;</a></span>
+    </div>
+    <div class="yf-bot clearfix">
+    	<div class="yf-lt fl">
+        	<ul class="aa">
+            	<li class="aa1"><img src="img/5c2dbdcd82fcfb396e692b67eca4_1900_2660.cg.jpg_ebe3f1d5_s2_180_255.jpg"/></li>
+                <li  class="aa1"><img src="img/3c6fca87a553f63306f30e80c3bb_640_900.cf.jpg_96bc3895_s2_180_255.jpg"></li>
+                <li  class="aa1"><img src="img/5580b1f22ab0f476a48910f26e66_640_900.cg.jpg_17afab7e_s2_180_255.jpg"></li>
+                <li class="aa1"><img src="img/da92c7b5790bef01145a5435d1e0_445_628.cf.jpg_176ae555_s2_180_255.jpg"></li>
+                <li class="aa1"><img src="img/605e8673b7f79df6cd1fcaa483bd_502_709.ch.jpg_da623016_s2_180_255.jpg"></li>
+                <li class="aa2"><img class="lan" src="img/9c52c46ef5d38bfbae3d17955881_640_960.cf.jpg_24a91126_s2_180_255.jpg"></li>
+                <li class="aa2"><img src="img/890b90be0dc39883466701c10893_1216_1715.cg.jpg_be1cb02b_s2_180_255.jpg"></li>
+                <li class="aa2"><img src="img/ffd169a276c793a7990ece46e71b_640_832.ch.jpg_8597ae33_s2_180_255.jpg"></li>
+                <li class="aa2"><img src="img/1583b77dfe31af933eeff13da4bf_640_900.ch.jpg_d2948eed_s2_180_255.jpg"></li>
+                <li class="aa2"><img src="img/fdf308da705c2d7e3f9134c0fb60_640_900.ch.jpg_ea113416_s2_180_255.jpg"></li>
+                <div class="bb1 fl clearfix">
+                    <div class="top-zi fl clearfix">
+                        <span class="shangy fl">上衣</span>
+                        <span class="bei fl">
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                        </span>
+                    </div>
+                    <div class="top-zi fl clearfix">
+                        <span class="shang fl">上衣</span>
+                        <span class="bei fl">
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                        </span>
+                    </div>
+                    <div class="top-zi fl clearfix">
+                        <span class="shang fl">上衣</span>
+                        <span class="bei fl">
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                        </span>
+                    </div>
+                </div>
+           </ul>
+        </div>
+        <div class="yf-right clearfix">
+        	<div class="zong fl clearfix">
+                <span><a class="b1 fl" href="#">最热衣服好店</a><a class="b2 fr" href="#">更多好店&gt;</a></span>
+                
+                 <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/1.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/2.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/3.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/4.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/5.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/6.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/7.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/8.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi2 fl clearfix">
+                        <span class="tu fl"><img src="img/9.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+             </div>
+        </div>
+    </div>
+ </div>
+ <div class="yf">
+ 	<div class="yf-bt clearfix">
+    	<span class="left-bto fl"></span><span class="left-bt2 fl">&nbsp;今日上新4098件</span>
+        <span class="right-bt fr"><a href="#">查看所有鞋子&gt;</a></span>
+    </div>
+    <div class="yf-bot clearfix">
+    	<div class="yf-lt fl">
+        	<ul class="aa">
+            	<li class="aa1"><img src="img/a0551a3ae3fbb1c7023dfcc8c4fa_640_900.cg.jpg_39c9e2b8_s2_180_255.jpg"/></li>
+                <li  class="aa1"><img class="lan" src="img/ed0f7873c7a37b45d74eb5099eb3_640_960.cg.jpg_1d23e04d_s2_180_255.jpg"></li>
+                <li  class="aa1"><img class="lan" src="img/8fbaf4428e309073e20067b9b286_640_970.ch.jpg_96dd5903_s2_180_255.jpg"></li>
+                <li class="aa1"><img class="lan" src="img/7417473c0ff95e16ccc511652ad5_640_900.cc.jpg_0091c1a0_s2_180_255.jpg"></li>
+                <li class="aa1"><img src="img/605e8673b7f79df6cd1fcaa483bd_502_709.ch.jpg_da623016_s2_180_255.jpg"></li>
+                <li class="aa1"><img class="lan" src="img/ee5e00fd4055ef4dcb33d8047371_640_832.ch.jpg_6a3f3fb9_s2_180_255.jpg"/></li>
+                <li  class="aa1"><img class="lan" src="img/e4879a37946dca6e59c5426522a9_640_960.ch.jpg_b4669978_s2_180_255.jpg"></li>
+                <li  class="aa1"><img class="lan" src="img/2bb5a55edafe8bf25fd9d49a9c40_714_1000.ch.jpg_23b89cb3_s2_180_255.jpg"></li>
+                <li class="aa1"><img class="lan" src="img/becad60780be065f9dfe25a80ac5_640_900.cg.jpg_97b3e1c8_s2_180_255.jpg"></li>
+                <li class="aa1"><img src="img/04c683edaa29159503c397c6a4d0_640_900.cc.jpg_48d0c85c_s2_180_255.jpg"></li>
+                 <div class="bb1 fl clearfix">
+                    <div class="top-zi fl clearfix">
+                        <span class="shangy fl">上衣</span>
+                        <span class="bei fl">
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                        </span>
+                    </div>
+                    <div class="top-zi fl clearfix">
+                        <span class="shang fl">上衣</span>
+                        <span class="bei fl">
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                        </span>
+                    </div>
+                    <div class="top-zi fl clearfix">
+                        <span class="shang fl">上衣</span>
+                        <span class="bei fl">
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                        </span>
+                    </div>
+                </div>
+           </ul>
+        </div>
+        <div class="yf-right clearfix">
+        	<div class="zong fl clearfix">
+                <span><a class="b1 fl" href="#">最热衣服好店</a><a class="b2 fr" href="#">更多好店&gt;</a></span>
+                
+                 <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/1.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/2.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/3.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/4.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/5.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/6.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/7.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/8.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi2 fl clearfix">
+                        <span class="tu fl"><img src="img/9.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+             </div>
+        </div>
+    </div>
+ </div>
+ <div class="yf">
+ 	<div class="yf-bt clearfix">
+    	<span class="left-btoo fl"></span><span class="left-bt2 fl">&nbsp;今日上新4098件</span>
+        <span class="right-bt fr"><a href="#">查看所有包包&gt;</a></span>
+    </div>
+     <div class="yf-bot clearfix">
+    	<div class="yf-lt fl">
+        	<ul class="aa">
+            	<li class="aa1"><img src="img/37f28d3f1569ccee51b54d688b41_640_832.cc.jpg_7aee466e_s2_180_255.jpg"/></li>
+                <li  class="aa1"><img src="img/0c31f8935c1e8311cf083a124e78_640_832.cg.jpg_84c346e4_s2_180_255.jpg"></li>
+                <li  class="aa1"><img src="img/8372c56c4fa7bf471931bf269449_640_900.cf.jpg_ff089cb6_s2_180_255.jpg"></li>
+                <li class="aa1"><img src="img/dfc41ade15038776c22176fc079b_640_900.cc.jpg_70957322_s2_180_255.jpg"></li>
+                <li class="aa1"><img src="img/77090c057128180681938fa7959b_640_832.cf.jpg_4524279d_s2_180_255.jpg"></li>
+                <li class="aa2"><img class="lan" src="img/384b42f88751f71a6be02425ef2d_640_900.cc.jpg_18e10ed9_s2_180_255.jpg"></li>
+                <li class="aa2"><img class="lan" src="img/f740e6be572ceed4d0fe466705c4_1000_1500.cg.jpg_2179acea_s2_180_255.jpg"></li>
+                <li class="aa2"><img src="img/dcf235c9af48627b2e540776d1bf_640_832.cg.jpg_a9cb84f9_s2_180_255.jpg"></li>
+                <li class="aa2"><img src="img/39085c4e0ab90293095a4e858e4f_640_832.cc.jpg_0d67eb72_s2_180_255.jpg"></li>
+                <li class="aa2"><img src="img/85a8b7c432346c7c1ae3ae92ae67_640_900.cf.jpg_33c090eb_s2_180_255.jpg"></li>
+                <div class="bb1 fl clearfix">
+                    <div class="top-zi fl clearfix">
+                        <span class="shangy fl">上衣</span>
+                        <span class="bei fl">
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                        </span>
+                    </div>
+                    <div class="top-zi fl clearfix">
+                        <span class="shang fl">上衣</span>
+                        <span class="bei fl">
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                        </span>
+                    </div>
+                    <div class="top-zi fl clearfix">
+                        <span class="shang fl">上衣</span>
+                        <span class="bei fl">
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                        </span>
+                    </div>
+                </div>
+           </ul>
+        </div>
+        <div class="yf-right clearfix">
+        	<div class="zong fl clearfix">
+                <span><a class="b1 fl" href="#">最热衣服好店</a><a class="b2 fr" href="#">更多好店&gt;</a></span>
+                
+                 <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/1.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/2.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/3.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/4.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/5.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/6.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/7.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/8.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi2 fl clearfix">
+                        <span class="tu fl"><img src="img/9.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+             </div>
+        </div>
+    </div>
+ </div>
+ <div class="yf">
+ 	<div class="yf-bt clearfix">
+    	<span class="left-btooo fl"></span><span class="left-bt2 fl">&nbsp;今日上新4098件</span>
+        <span class="right-bt fr"><a href="#">查看所有配饰&gt;</a></span>
+    </div>
+    <div class="yf-bot clearfix">
+    	<div class="yf-lt fl">
+        	<ul class="aa">
+            	<li class="aa1"><img src="img/5c2dbdcd82fcfb396e692b67eca4_1900_2660.cg.jpg_ebe3f1d5_s2_180_255.jpg"/></li>
+                <li  class="aa1"><img src="img/3c6fca87a553f63306f30e80c3bb_640_900.cf.jpg_96bc3895_s2_180_255.jpg"></li>
+                <li  class="aa1"><img src="img/5580b1f22ab0f476a48910f26e66_640_900.cg.jpg_17afab7e_s2_180_255.jpg"></li>
+                <li class="aa1"><img src="img/da92c7b5790bef01145a5435d1e0_445_628.cf.jpg_176ae555_s2_180_255.jpg"></li>
+                <li class="aa1"><img src="img/605e8673b7f79df6cd1fcaa483bd_502_709.ch.jpg_da623016_s2_180_255.jpg"></li>
+                <li class="aa2"><img class="lan" src="img/9c52c46ef5d38bfbae3d17955881_640_960.cf.jpg_24a91126_s2_180_255.jpg"></li>
+                <li class="aa2"><img src="img/890b90be0dc39883466701c10893_1216_1715.cg.jpg_be1cb02b_s2_180_255.jpg"></li>
+                <li class="aa2"><img src="img/ffd169a276c793a7990ece46e71b_640_832.ch.jpg_8597ae33_s2_180_255.jpg"></li>
+                <li class="aa2"><img src="img/1583b77dfe31af933eeff13da4bf_640_900.ch.jpg_d2948eed_s2_180_255.jpg"></li>
+                <li class="aa2"><img src="img/fdf308da705c2d7e3f9134c0fb60_640_900.ch.jpg_ea113416_s2_180_255.jpg"></li>
+                <div class="bb1 fl clearfix">
+                    <div class="top-zi fl clearfix">
+                        <span class="shangy fl">上衣</span>
+                        <span class="bei fl">
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                        </span>
+                    </div>
+                    <div class="top-zi fl clearfix">
+                        <span class="shang fl">上衣</span>
+                        <span class="bei fl">
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                        </span>
+                    </div>
+                    <div class="top-zi fl clearfix">
+                        <span class="shang fl">上衣</span>
+                        <span class="bei fl">
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                            <p>背心 针织衫 打底衫 衬衫 卫衣</p>
+                        </span>
+                    </div>
+                </div>
+           </ul>
+        </div>
+        <div class="yf-right clearfix">
+        	<div class="zong fl clearfix">
+                <span><a class="b1 fl" href="#">最热衣服好店</a><a class="b2 fr" href="#">更多好店&gt;</a></span>
+                
+                 <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/1.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/2.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/3.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/4.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/5.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/6.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/7.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi fl clearfix">
+                        <span class="tu fl"><img src="img/8.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+                  <div class="r-zi2 fl clearfix">
+                        <span class="tu fl"><img src="img/9.png"/></span>
+                        <span class="zi fl">
+                            <p class="p1">妖精的衣橱</p>
+                            <p class="p2">235件商品/总销量84572</p>
+                        </span>
+                 </div>
+             </div>
+        </div>
+    </div>
+ </div>
+ <div class="cloth clearfix">
+    <span class="rm fl"></span>
+    <ul class="rm-1 fr">
+       <li><a href="#">欧美</a></li>
+       <li><a href="#">甜美</a></li>
+       <li><a href="#">复古</a></li>
+       <li><a href="#">个性</a></li>
+       <li><a href="#">日系</a></li>
+       <li><a href="#">其他</a></li>
+       <li class="rr"><a href="#">更多杂志></a></li>
+    </ul>
+ </div>
+ <div class="lw clearfix">
+ 	<div class="lw-1 fl">
+    	<span class="sp1"><a href="#">小女人有恋物癖</a></span>
+        <img src="img/eee2323884768bd34eab636cfe24.c6.jpg"/>
+        <p class="p1">86个分享&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sp-2">去看看</span></p>
+    </div>
+    <div class="lw-1 fl">
+    	<span class="sp1"><a href="#">小女人有恋物癖</a></span>
+        <img src="img/eee2323884768bd34eab636cfe24.c6.jpg"/>
+        <p class="p1">86个分享&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sp-2">去看看</span></p>
+    </div>
+    <div class="lw-1 fl">
+    	<span class="sp1"><a href="#">小女人有恋物癖</a></span>
+        <img src="img/eee2323884768bd34eab636cfe24.c6.jpg"/>
+        <p class="p1">86个分享&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sp-2">去看看</span></p>
+    </div>
+    <div class="lw-1 fl">
+    	<span class="sp1"><a href="#">小女人有恋物癖</a></span>
+        <img src="img/eee2323884768bd34eab636cfe24.c6.jpg"/>
+        <p class="p1">86个分享&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sp-2">去看看</span></p>
+    </div>
+    <div class="lw-1 fl">
+    	<span class="sp1"><a href="#">小女人有恋物癖</a></span>
+        <img src="img/eee2323884768bd34eab636cfe24.c6.jpg"/>
+        <p class="p1">86个分享&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sp-2">去看看</span></p>
+    </div>
+ </div>
+ <div class="footer w clearfix">
+ 	<div class="ft-1 fl clearfix">
+        <span class="dianhua fl"></span>
+        <span class="dh fl">
+            <p>4000-800-577</p>
+            <p>美丽说客服热线</p>
+            <p>周一至周日：08：00-22：00</p>
+        </span>
+    </div>
+     <div class="fo fl">
+           <h3>用户帮助</h3>
+           <p>新手指南</p>
+           <p>网站地图</p>
+           <p>意见反馈</p>
+     </div>
+    <div class="fo fl">
+       <h3>关于我们</h3>
+       <p>关于美丽说</p>
+       <p>联系我们</p>
+       <p>加入美丽说</p>
+       <p>商家入驻</p>
+       <p>商家推广</p>
+   </div>
+     <div class="fo fl">
+           <h3>关注我们</h3>
+           <p><span class="xl"></span>新浪微博</p>
+           <p><span class="qq"></span>QQ空间</p>
+           <p><span class="tx"></span>腾讯微博</p>
+     </div>
+     <div class="fo fl">
+           <h3>美丽说微信服务号</h3>
+           <img src="img/10.png"/></p>
+     </div>
+     <div class="fo fr">
+           <h3>美丽说微信服务号</h3>
+           <img src="img/11.png"/>
+     </div>
+    <div class="foot-2 clearfix">
+    	 <ul class="footer-2 clearfix">
+               <li class="fl">友情链接：腾讯女性 列表网 太平洋女性网 多宝汇 七丽女性网 酷我音乐 LADYMAX时尚网 空姐网 中国品牌服装网 优美网 男士时尚 哈秀时尚网</li>
+               <li class="p-l fr"><a href="#">更多&gt;&gt;</a></li>
+        </ul>
+     </div>
+    <div class="foot-3">
+        <p>Copyright2014Meilishou.com 电信与信息服务业务经营许可证10079号 企业法人营业执照 京ICP备11031139号 京公网安备110108006045</p>
+        <p class="pp">客服邮箱：kf@meilishuo.com 客户电话：4000-800-577 文明办网文明上网举报电话：010-82615762 违法不良信息举报中心 我最喜爱的人民警察评选>></p>
+    </div>
+ </div>
+</body>
+</html>

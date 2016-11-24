@@ -1,0 +1,16 @@
+	*{padding:0;margin:0; font-size:12px;}
+	body,p,ol,ul,dl{padding:0; margin:0;}
+	h1,h2,h3,h4,h5,h6{ font-weight:normal; font-size:12px;}
+	li{list-style:none}
+	a{ text-decoration:none; color:#000}
+	em,i{ font-style:normal}
+	b,strong{ font-style:normal}
+	.clearfix:after{display:block;content:'';clear:both;}
+	.clearfix{zoom:1;}
+	input, textarea{outline:none;}
+	textarea{width:200px; height:200px; resize:none;}
+	table{border-collapse:collapse;}
+	tr,td{border:1px solid #ccc; padding:0}
+	.fl{ float:left;}
+	.fr{ float:right;}
+	.w{ width:1000px; margin:0 auto;}

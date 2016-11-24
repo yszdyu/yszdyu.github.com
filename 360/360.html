@@ -1,0 +1,825 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>360</title>
+<link href="css/base.css" rel="stylesheet">
+<style>
+    input{outline:none;}
+    .header{ border-bottom:2px solid #22ac38; margin-bottom:13px;}
+	.header h1{ width:150px; height:45px;background:url(img/logo.png) no-repeat;text-indent:-999em;cursor:pointer;margin-right:14px; margin-top:22px;}
+	.header .inp{ margin-top:24px;}
+	.header .sp .inp{ display:block; width:462px; height:36px; background:#eee; border:1px solid #eee;border-radius:3px;}
+	.header .sp img{margin-top:24px;cursor:pointer;}
+	.header .sp{ margin-right:39px; margin-bottom:14px;}
+	.header ul li .sp2{ display:block; width:29px; height:32px; background:url(img/3.png) no-repeat; margin-right:5px;}
+	.header ul li .sp3{ display:block; width:29px; height:32px; background: url(img/4.png) no-repeat;margin-right:5px;}
+	.header ul li .sp4{ display:block; width:29px; height:32px; background:url(img/5.png) no-repeat;margin-right:5px;}
+	.header ul li a{ font-size:14px; color:#666; padding-top:4px;}
+	.header ul li{ margin-top:27px; margin-right:12px;}
+	.header-2 ul li{ margin-right:21px; font-size:16px; color:#666;}
+	.header-2 ul .li-1{ margin-left:3px;color:#22ac38;}
+	.header-2 ul .li-2{ margin-right:31px;}
+	.header-2{ margin-bottom:15px;}
+	.header-3 img{ width:1010px; margin:0 auto;position:relative;}
+	.header-3 .ops ul .li-3{ width:98px; height:57px;background: url(img/62.png) no-repeat; position:absolute; left:178px;top:555px;}
+	.ops:hover .li-4{width:98px; height:57px;background:url(img/63.png) no-repeat; border:1px solid green;}
+	.header-3 .ops ul .li-4{ display:block;width:99px; height:57px;background: url(img/63.png) no-repeat; position:absolute; left:290px;top:555px;}
+	.header-3 .ops ul .li-5{ width:99px; height:57px;background: url(img/12.png) no-repeat; position:absolute; left:400px;top:555px;}
+	.header-3 .ops ul .li-6{ width:99px; height:57px;background: url(img/14.png) no-repeat; position:absolute; left:510px;top:555px;}
+	.header-3 .ops ul .li-7{ width:99px; height:57px;background: url(img/15.png) no-repeat; position:absolute; left:630px;top:555px;}
+	.header-3 .ops ul .li-8{ width:99px; height:57px;background: url(img/16.png) no-repeat; position:absolute; left:745px;top:555px;}
+	.header-3 .ops ul .li-9{ width:99px; height:57px;background: url(img/17.png) no-repeat; position:absolute; left:860px;top:555px;}
+	.header-3 .ops ul .li-10{ width:99px; height:57px;background: url(img/18.png) no-repeat; position:absolute; left:970px;top:555px;}
+	.header-3 .ops ul .li-11{ width:99px; height:57px;background: url(img/12.png) no-repeat; position:absolute; left:1083px;top:555px;}
+	.header-3 .ops .sp5{ display:block;font-size:34px; color:#FFF;position:absolute; left:185px;top:460px; font-weight:bold;}
+	.header-3 .ops .sp6{ display:block;font-size:17px; color:#FFF;position:absolute; left:185px;top:520px; font-weight:bold;}
+    .header-4{ background:#f4f4f4;}
+	.hehe{ height:95px;} 
+    .header-4 h2{ padding-top:40px; padding-bottom:20px;}
+	.header-4 a{ font-size:31px; color:#2b2b2b; font-weight:bold;}
+	.header-4 .sp7{ font-size:13px; color:#22ac38;padding:0 14px; border-right:1px solid #bdbdbd; margin-left:14px;}
+	.header-4 .sp8{ font-size:13px; color:#242424;padding:0 14px; border-right:1px solid #bdbdbd;}
+	.header-4 .sp9{ font-size:13px; color:#242424;padding:0 14px; border-right:none;}
+	.header-4 .spa{ padding:46px 99px 22px 0;}
+	.header-4 .spa a{ font-size:23px; color:#333;}
+	.header-4 .ul-1 .li-2{ margin-left:3px;width:375px; height:288px; background:#FFF; position:relative;}	
+	.header-4 .ul-1 .li-2 .opa{ width:100%; height:22px;position:absolute; left:0; top:232px;background:#000; opacity:.3; filter: alpha( opacity=30);}
+	.header-4 .ul-1 .li-2 i{ font-size:12px; color:#fff;position:absolute; left:4px; top:235px;}
+	.header-4 .ul-1 .li-2 p{margin-left:12px; margin-top:15px; font-size:13px; color:#444;}
+	.header-4 .ul-1 .li-3 .ul2{ width:376px; height:288px;}
+	.header-4 .ul-1 .li-3 .ul2 li img{ width:180px; height:100px;}
+	.header-4 .ul-1 .li-3 .ul2 li{ width:180px;height:134px; background:#FFF;}
+	.header-4 .ul-1 .li-3 p{margin-left:12px; margin-top:13px;font-size:13px; color:#444;}
+	.header-4 .ul-1 .li-2{margin-right:5px;}
+	.header-4 .ul-1 .li-3 .li1{ margin-bottom:20px;}
+	.header-4 .ul-1 .li-3 .ul2 li{margin-right:5px;}
+	.header-4 .ul-1 .li-4{ width:240px; height:288px; margin-left:6px; background:#FFF;}
+	.header-4 .ul-1 .li-4 .p1{ margin-top:22px; margin-left:9px;font-size:12px; color:#333;}
+	.header-4 .ul-1 .li-4 p{ margin-bottom:16px; margin-left:9px; font-size:12px; color:#333;}	
+	.header-5{ height:740px;background:#f4f4f4;}
+	.hehe-1{ height:95px;} 
+    .header-5 h2{ padding-top:30px; padding-bottom:10px;}
+	.header-5 a{ font-size:31px; color:#2b2b2b; font-weight:bold;}
+	.header-5 .sp7{ font-size:13px; color:#22ac38;padding:0 14px; border-right:1px solid #bdbdbd; margin-left:14px;}
+	.header-5 .sp8{ font-size:13px; color:#242424;padding:0 14px; border-right:1px solid #bdbdbd;}
+	.header-5 .sp9{ font-size:13px; color:#242424;padding:0 14px; border-right:none;}
+	.header-5 .spa{ padding:46px 29px 22px 0;}
+	.header-5 .spa a{ font-size:23px; color:#333;}
+	.header-5 .ul-3{ width:752px; height:641px;}
+	.header-5 .ul-3 li{ width:180px; height:310px; background:#FFF;margin-right:5px;}
+	.header-5 .ul-3 li img{ width:180px; height:246px;}
+	.header-5 .ul-3 .li2{ margin-left:3px; }
+	.header-5 .ul-3 .p2{ font-size:14px; color:#333; margin:14px 0 10px 10px;}
+	.header-5 .ul-3 .p3{ font-size:13px; color:#999; margin-left:10px;}
+	.header-5 .ul-3 .li3{ margin-left:3px; margin-top:20px;}
+	.header-5 .ul-3 .p2{ font-size:14px; color:#333; margin:14px 0 10px 10px;}
+	.header-5 .ul-3 .p3{ font-size:13px; color:#999; margin-left:10px;}
+	.header-5 .dv ul{  width:240px; height:440px; margin-left:16px; margin-bottom:25px;}
+	.header-5 .dv ul .ll{ margin-bottom:20px;}
+	.header-5 .dv .lia{ width:241px; height:34px; line-height:34px;}
+	.header-5 .dv .lia .shu{display:block; width:30px; text-align:center;line-height:34px;font-size:12px; color:#46c832;}
+	.header-5 .dv .lia .zi{ font-size:14px; color:#2b2b2b;}
+	.header-5 .dv .lia div .i1{ width:12px; height:10px; background:url(img/65_03.png) no-repeat; margin:12px 10px 0 22px;}
+	.header-5 .dv .lia div .sb{ margin-top:1px;}
+	.header-5 .dv .lib{ width:241px; height:34px; background:#eee; line-height:34px;}
+	.header-5 .dv .lib .shu{ display:block; width:30px; text-align:center;line-height:34px;font-size:12px; color:#46c832;}
+	.header-5 .dv .lib .zi{ font-size:14px; color:#2b2b2b;}
+	.header-5 .dv .lib div .i1{ width:12px; height:10px; background:url(img/65_03.png) no-repeat; margin:12px 10px 0 22px;}
+	.header-5 .dv .lib div .sb{ margin-top:1px;}
+	.header-5 .dv{ width:256px; height:641px;}
+	.header-5 .dv h3{ font-size:23px; color:#2b2b2b; font-weight:bold; margin-bottom:15px; margin-left:18px;}
+	.header-5 .dv .sx{ width:240px; height:135px; background:#FFF;}
+	.header-5 .dv .sx li{ padding-top:10px;}
+	.header-5 .dv .sx a{ font-size:14px; color:#2b2b2b;}
+	.header-5 .dv .sx span{ margin-left:13px;}
+	.yg{ height:230px; background:#f4f4f4;}
+	.hehe-3{ height:95px;} 
+	.yg h2{ padding-top:30px; padding-bottom:10px;}
+	.yg a{ font-size:31px; color:#2b2b2b; font-weight:bold;}
+	.yg .sp{ font-size:13px; color:#242424;padding:0 14px;}
+	.yg .spa{ padding:30px 100px 20px 0;}
+	.yg .ul1 .tu{ width:180px; height:134px; background:#FFF;}
+	.yg .ul1 .li1{ margin-left:3px; margin-right:10px;} 
+	.yg .ul1 .li1 img{ width:180px; height:100px;}
+	.yg .ul1 .li2 img{ width:238px; height:100px;}
+	.yg .ul1 .li2 p{ font-size:14px; color:#333; margin-top:20px; font-weight:bold;}
+	.yg .ul1 .li1 p{ text-align:center; line-height:34px; font-size:14px; color:#444;} 	
+	.zy{ background:#f4f4f4;}
+	.zy h2{margin-top:19px; margin-bottom:20px;}
+	.zy h2 span{ border-right:1px solid #bdbdbd;padding:0 14px;}
+	.zy h2 .sp7{ color:#22ac38;}
+	.zy h2 .sp9{ border-right:none;}
+    .zy a{ font-size:31px; color:#2b2b2b; font-weight:bold;}
+	.zy .hehe5 .spa{ margin-right:124px; margin-top:25px;}
+	.zy .hehe5 .spa a{ font-size:23px; color:#2b2b2b;}
+	.zy .hehe6{ width:375px;height:331px; background:#fff; margin-left:3px;}
+	.zy .hehe6 li .p1{ font-size:14px; color:#444; font-weight:bold; margin-top:20px; margin-left:4px; margin-bottom:11px;}
+	.zy .hehe6 li .p2{ font-size:12px; color:#888; margin-left:4px;}
+	.zy .hehe6 .ss{ width:308px; height:331px;}
+	.zy .hehe6 ul{ width:1010px; height:332px;}
+	.zy .hehe6 .li-3{ margin-left:6px;}
+	.zy .hehe6 .li-3 .ul2{ width:376px; height:288px;}
+	.zy .hehe6 .ul-1 .li-3 .ul2 li img{ width:180px; height:100px;}
+	.zy .hehe6 .ul-1 .li-3 .ul2 li{ width:180px;height:134px; background:#FFF;}
+	.zy .hehe6 .ul-1 .li-3 p{margin-left:12px; margin-top:13px;font-size:13px; color:#444;}
+	.zy .hehe6 .ul-1 .li-3 .li1{ margin-bottom:20px;}
+	.zy .hehe6 .ul-1 .li-3 .ul2 li{margin-right:5px;}
+	.zy .hehe6 .li-3 .ul2 li img{ width:180px; height:100px;}
+	.zy .hehe6 .li-3 .ul2 li{ width:180px; height:155px; background:#FFF; margin-right:6px;}
+	.zy .hehe6 .li-3 .ul2 .li1{ margin-bottom:21px;}
+	.zy .hehe6 .li-3 .ul2 .pa{ font-size:12px; color:#444; font-weight:bold; margin:14px 0 10px 9px;}
+	.zy .hehe6 .li-3 .ul2 .pb{ font-size:12px; color:#888; margin-left:9px;}
+	.zy .hehe6 .cc{ width:242px; height:333px;}
+	.zy .cc .lia{ width:241px; height:34px; line-height:34px;}
+	.zy .cc .lia .shu{display:block; width:30px; text-align:center;line-height:34px;font-size:12px; color:#46c832;}
+	.zy .hehe6 .cc .lia .i1{ width:12px; height:10px; background:url(img/65_03.png) no-repeat; margin:12px 10px 0 22px;}
+	.zy .cc .lia .zi{ font-size:14px; color:#2b2b2b;}
+	.zy .cc .lia div .sb{ margin-top:1px;}
+	.dm{ background:#f4f4f4;}
+	.dm h2{margin-top:19px; margin-bottom:20px;}
+	.dm h2 span{ border-right:1px solid #bdbdbd;padding:0 14px;}
+	.dm h2 .sp7{ color:#22ac38;}
+	.dm h2 .sp9{ border-right:none;}
+    .dm a{ font-size:31px; color:#2b2b2b; font-weight:bold;}
+	.dm .haha .spa{ margin-right:148px; margin-top:25px;}
+	.dm .haha .spa a{ font-size:23px; color:#2b2b2b;}	
+	.dm .hehe7{ width:375px;height:331px; background:#fff; margin-left:3px;}
+	.dm .hehe7 li .p1{ font-size:14px; color:#444; font-weight:bold; margin-top:20px; margin-left:4px; margin-bottom:11px;}
+	.dm .hehe7 li .p2{ font-size:12px; color:#888; margin-left:4px;}
+	.dm .hehe7 .ss{ width:308px; height:331px;}
+	.dm .hehe7 ul{ width:1010px; height:332px;}
+	.dm .hehe7 .li-3{ margin-left:6px;}
+	.dm .hehe7 .li-3 .ul2{ width:376px; height:288px;}
+	.dm .hehe7 .ul-1 .li-3 .ul2 li img{ width:180px; height:100px;}
+	.dm .hehe7 .ul-1 .li-3 .ul2 li{ width:180px;height:134px; background:#FFF;}
+	.dm .hehe7 .ul-1 .li-3 p{margin-left:12px; margin-top:13px;font-size:13px; color:#444;}
+	.dm .hehe7 .ul-1 .li-3 .li1{ margin-bottom:20px;}
+	.dm .hehe7 .ul-1 .li-3 .ul2 li{margin-right:5px;}
+	
+	.dm .hehe7 .li-3 .ul2 li img{ width:180px; height:100px;}
+	.dm .hehe7 .li-3 .ul2 li{ width:180px; height:155px; background:#FFF; margin-right:6px;}
+	.dm .hehe7 .li-3 .ul2 .li1{ margin-bottom:21px;}
+	.dm .hehe7 .li-3 .ul2 .pa{ font-size:12px; color:#444; font-weight:bold; margin:14px 0 10px 9px;}
+	.dm .hehe7 .li-3 .ul2 .pb{ font-size:12px; color:#888; margin-left:9px;}
+	.dj{ height:700px; background:#f4f4f4;} 
+    .dj h2{ padding-top:30px; padding-bottom:10px;}
+	.dj a{ font-size:31px; color:#2b2b2b; font-weight:bold;}
+	.dj .sp7{ font-size:13px; color:#22ac38;padding:0 14px; border-right:none; margin-left:14px;}
+	.dj .sp8{ font-size:13px; color:#242424;padding:0 14px; border-right:1px solid #bdbdbd;}
+	.dj .ha2{ width:1010px; height:410px;}
+	.dj .ha2 ul{ width:617px; height:410px;}
+	.dj .ha2 ul li{ width:205px; height:207px;}
+	.dj .ha2 ul li img{ width:205px; height:207px;}
+	.di{ width:1010px;height:90px; background:#f4f4f4;}
+ .di li{ border-right:1px solid #956695; font-size:11px; color:#666;padding:0 9px; margin-bottom:7px;}
+ .di .li22{ margin-left:300px;}
+ .di .li11{ border-right:none;}
+ .di p{ text-align:center; font-size:12px; color:#666;}
+</style>
+</head>
+<body>
+<div class="header clearfix w">
+	<h1 class="fl">360</h1>
+     <span class="sp fl">
+	  <input  class="inp fl" type="text" value="" name="ss" placeholder="&nbsp;&nbsp;多啦A梦，伴我同行"/>
+	  <img src="img/ss.png"/>
+	</span>
+    <ul class="fl clearfix">
+    	<li class="fl">
+        	<span class="sp2 fl"></span>
+            <a class="fl" href="#">我的影视</a>
+        </li>
+        <li class="fl">
+        	<span class="sp3 fl"></span>
+            <a class="fl" href="#">观看记录</a>
+        </li>
+        <li class="fl">
+        	<span class="sp4 fl"></span>
+            <a class="fl" href="#">APP下载</a>
+        </li>
+    </ul>
+</div>
+<div class="header-2 w">
+	<ul class="clearfix">
+    	<li class="li-1 fl">首页</li>
+        <li class="fl">网络院线</li>
+        <li class="fl">电视剧</li>
+        <li class="fl">电影·预告</li>
+        <li class="fl">综艺</li>
+        <li class="fl">动漫</li>
+        <li class="fl">资讯</li>
+        <li class="fl">娱乐</li>
+        <li class="fl">直播</li>
+        <li class="li-2 fl">广场</li>
+        <li class="fl">秀场</li>
+        <li class="fl">体育</li>
+        <li class="fl">搞笑</li>
+        <li class="fl">舞蹈</li>
+        <li class="fl">音乐</li>
+        <li class="fl">游戏</li>
+        <li class="fl">专题</li>
+    </ul>
+</div>
+<div class="header-3 w clearfix">
+    <img src="img/1.jpg"/>
+    <div class="ops">
+   	<ul class="clearfix">
+    	<li class="fl li-3"></li>
+        <li class="fl li-4"></li>
+        <li class="fl li-5"></li>
+        <li class="fl li-6"></li>
+        <li class="fl li-7"></li>
+        <li class="fl li-8"></li>
+        <li class="fl li-9"></li>
+        <li class="fl li-10"></li>
+        <li class="fl li-11"></li>
+    </ul>
+    <span class="sp5">大汉情缘之云中歌</span>
+    <span class="sp6">云歌嫁孟珏上演冷血复仇 四度与霍成君对峙</span>
+   </div>
+</div>
+<div class="header-4 w clearfix">
+	<div class="hehe w clearfix">
+		<h2 class="fl">
+    	<a href="#"> 今日热门
+        	<span class="sp7">热点</span>
+            <span class="sp8">美女</span>
+            <span class="sp8">游戏</span>
+            <span class="sp8">搞笑</span>
+            <span class="sp9">更多>></span>
+        </a>
+    </h2>
+   	    <span class="spa fr">
+    	<a href="#">独家热门资讯</a>
+    </span>
+    </div>
+    <ul class="ul-1 w fl clearfix">
+    	<li class="li-2 fl">
+        	<img src="img/2.jpg"/>
+            <span class="opa"></span>
+            <i>趁其不备拔腿逃走</i>
+            <p>女子餐厅被盗绑架 加装尾翼饭饮料瞬间台历</p>
+        </li>
+        <li class="li-3 fl clearfix">
+        	<ul class="ul2">
+            	<li class="li1 fl">
+                	<a href="#"><img src="img/6.png"/></a>                    
+                    <p>女子餐厅被盗绑架</p>                            
+                </li>
+                <li class="li1 fl">
+                	<a href="#"><img src="img/7.png"/></a>
+                    <p>女子餐厅被盗绑架</p>
+                </li>
+                <li class="fl">
+                	<a href="#"><img src="img/9.png"/></a>
+                    <p>女子餐厅被盗绑架</p>
+                </li>
+                <li class="fl">
+               		<a href="#"><img src="img/11.png"/></a>
+                    <p>女子餐厅被盗绑架</p>
+                </li>
+            </ul>
+        </li>
+        <li class="li-4 fl">
+        	<img src="img/8.png"/>
+            <p class="p1">二十国集团峰会即将考试</p>
+            <p>你个损色，还瞅</p>
+            <p>你瞅啥，在瞅试试看</p>
+            <p>畜类拔崔，哈哈</p>
+            <p>明天新闻头条</p>
+        </li>
+    </ul>
+</div>
+<div class="header-5 w clearfix">
+	<div class="hehe-1 w clearfix">
+    	<h2 class="fl">
+    	<a href="#"> 电视剧
+        	<span class="sp7">热点</span>
+            <span class="sp8">美女</span>
+            <span class="sp8">游戏</span>
+            <span class="sp8">搞笑</span>
+            <span class="sp8">美女</span>
+            <span class="sp8">游戏</span>
+            <span class="sp8">搞笑</span>
+            <span class="sp9">更多>></span>
+        </a>
+    </h2>
+   		<span class="spa fr">
+    	<a href="#">本月最受关注电视剧</a>
+    </span>
+    </div>
+    <ul class="ul-3 fl clearfix">
+    	<li class="li2 fl">
+        	<a href="#"><img src="img/25.png"/></a>
+            <p class="p2">家和万事兴MTV版</p>
+            <p class="p3">豪门的家庭怎么会和睦</p>
+        </li>
+        <li class="li2 fl">
+        	<a href="#"><img src="img/26.png"/></a>
+            <p class="p2">家和万事兴MTV版</p>
+            <p class="p3">豪门的家庭怎么会和睦</p>
+        </li>
+        <li class="li2 fl">
+        	<a href="#"><img src="img/27.png"/></a>
+            <p class="p2">家和万事兴MTV版</p>
+            <p class="p3">豪门的家庭怎么会和睦</p>
+        </li>
+        <li class="li2 fl">
+        	<a href="#"><img src="img/28.png"/></a>
+            <p class="p2">家和万事兴MTV版</p>
+            <p class="p3">豪门的家庭怎么会和睦</p>
+        </li>
+        <li class="li3 fl">
+        	<a href="#"><img src="img/30.png"/></a>
+            <p class="p2">我是来搞笑的</p>
+            <p class="p3">豪门的家庭怎么会和睦</p>
+        </li>
+        <li class="li3 fl">
+        	<a href="#"><img src="img/31.png"/></a>
+            <p class="p2">我是来搞笑的</p>
+            <p class="p3">豪门的家庭怎么会和睦</p>
+        </li>
+        <li class="li3 fl">
+        	<a href="#"><img src="img/32.png"/></a>
+            <p class="p2">你是逗逼吗</p>
+            <p class="p3">我呵呵呵呵呵呵</p>
+        </li>
+        <li class="li3 fl">
+        	<a href="#"><img src="img/33.png"/></a>
+            <p class="p2">字太多呜呜呜呜呜</p>
+            <p class="p3">豪门的家庭怎么会和睦</p>
+        </li>
+    </ul>
+    <div class="dv fl clearfix">
+    	<ul class="fl ">
+        	<li class="ll">
+            	<img src="img/29.png"/>
+            </li>
+            <li class="lia clearfix">
+            	<span class="shu fl">2</span>
+                <b class="zi fl">大汉情缘之云中歌</b>
+                <div class="fl clearfix">
+                	<i class="i1 fl"></i>
+                    <span class="sb fl">423.27万</span>
+                </div>
+            </li>
+            <li class="lib clearfix">
+            	<span class="shu fl">3</span>
+                <b class="zi fl">大汉情缘之云中歌</b>
+                <div class="fl clearfix">
+                	<i class="i1 fl"></i>
+                    <span class="sb fl">423.27万</span>
+                </div>
+            </li>
+            <li class="lia clearfix">
+            	<span class="shu fl">4</span>
+                <b class="zi fl">大汉情缘之云中歌</b>
+                <div class="fl clearfix">
+                	<i class="i1 fl"></i>
+                    <span class="sb fl">423.27万</span>
+                </div>
+            </li>
+         	<li class="lib clearfix">
+            	<span class="shu fl">5</span>
+                <b class="zi fl">大汉情缘之云中歌</b>
+                <div class="fl clearfix">
+                	<i class="i1 fl"></i>
+                    <span class="sb fl">423.27万</span>
+                </div>
+            </li>
+            <li class="lia clearfix">
+            	<span class="shu fl">6</span>
+                <b class="zi fl">大汉情缘之云中歌</b>
+                <div class="fl clearfix">
+                	<i class="i1 fl"></i>
+                    <span class="sb fl">423.27万</span>
+                </div>
+            </li>
+            <li class="lib clearfix">
+            	<span class="shu fl">7</span>
+                <b class="zi fl">大汉情缘之云中歌</b>
+                <div class="fl clearfix">
+                	<i class="i1 fl"></i>
+                    <span class="sb fl">423.27万</span>
+                </div>
+            </li>
+            <li class="lia clearfix">
+            	<span class="shu fl">8</span>
+                <b class="zi fl">大汉情缘之云中歌</b>
+                <div class="fl clearfix">
+                	<i class="i1 fl"></i>
+                    <span class="sb fl">423.27万</span>
+                </div>
+            </li>
+         	<li class="lib clearfix">
+            	<span class="shu fl">9</span>
+                <b class="zi fl">大汉情缘之云中歌</b>
+                <div class="fl clearfix">
+                	<i class="i1 fl"></i>
+                    <span class="sb fl">423.27万</span>
+                </div>
+            </li>
+            <li class="lia clearfix">
+            	<span class="shu fl">8</span>
+                <b class="zi fl">大汉情缘之云中歌</b>
+                <div class="fl clearfix">
+                	<i class="i1 fl"></i>
+                    <span class="sb fl">423.27万</span>
+                </div>
+            </li>
+        </ul>
+        <h3>电视剧筛选</h3>
+        <ul class="sx">
+        	<li><span><a href="#">类型：</a></span><span><a href="#">偶像</a></span><span><a href="#">都市</a></span><span><a href="#">谍战</a></span><span><a href="#">古装</a></span></li>
+            <li><span><a href="#">类型：</a></span><span><a href="#">偶像</a></span><span><a href="#">都市</a></span><span><a href="#">谍战</a></span><span><a href="#">古装</a></span></li>
+            <li><span><a href="#">类型：</a></span><span><a href="#">偶像</a></span><span><a href="#">都市</a></span><span><a href="#">谍战</a></span><span><a href="#">古装</a></span></li>
+            <li><span><a href="#">类型：</a></span><span><a href="#">偶像</a></span><span><a href="#">都市</a></span><span><a href="#">谍战</a></span><span><a href="#">古装</a></span></li>
+        </ul>
+       </div>
+    </div>
+</div>
+<div class="header-5 w clearfix">
+	<div class="hehe-1 w clearfix">
+    	<h2 class="fl">
+    	<a href="#"> 电影
+        	<span class="sp7">热门</span>
+            <span class="sp8">最新</span>
+            <span class="sp8">喜剧</span>
+            <span class="sp8">爱情</span>
+            <span class="sp8">动作</span>
+            <span class="sp8">恐怖</span>
+            <span class="sp8">战争</span>
+            <span class="sp9">更多>></span>
+        </a>
+    </h2>
+   		<span class="spa fr">
+    	<a href="#">本月最受关注电影</a>
+    </span>
+    </div>
+<ul class="ul-3 fl clearfix">
+    	<li class="li2 fl">
+        	<a href="#"><img src="img/34.png"/></a>
+            <p class="p2">家和万事兴MTV版</p>
+            <p class="p3">豪门的家庭怎么会和睦</p>
+        </li>
+        <li class="li2 fl">
+        	<a href="#"><img src="img/35.png"/></a>
+            <p class="p2">家和万事兴MTV版</p>
+            <p class="p3">豪门的家庭怎么会和睦</p>
+        </li>
+        <li class="li2 fl">
+        	<a href="#"><img src="img/36.png"/></a>
+            <p class="p2">家和万事兴MTV版</p>
+            <p class="p3">豪门的家庭怎么会和睦</p>
+        </li>
+        <li class="li2 fl">
+        	<a href="#"><img src="img/37.png"/></a>
+            <p class="p2">家和万事兴MTV版</p>
+            <p class="p3">豪门的家庭怎么会和睦</p>
+        </li>
+        <li class="li3 fl">
+        	<a href="#"><img src="img/40.png"/></a>
+            <p class="p2">我是来搞笑的</p>
+            <p class="p3">豪门的家庭怎么会和睦</p>
+        </li>
+        <li class="li3 fl">
+        	<a href="#"><img src="img/41.png"/></a>
+            <p class="p2">我是来搞笑的</p>
+            <p class="p3">豪门的家庭怎么会和睦</p>
+        </li>
+        <li class="li3 fl">
+        	<a href="#"><img src="img/43.png"/></a>
+            <p class="p2">你是逗逼吗</p>
+            <p class="p3">我呵呵呵呵呵呵</p>
+        </li>
+        <li class="li3 fl">
+        	<a href="#"><img src="img/39.png"/></a>
+            <p class="p2">字太多呜呜呜呜呜</p>
+            <p class="p3">豪门的家庭怎么会和睦</p>
+        </li>
+    </ul>
+<div class="dv fl clearfix">
+    	<ul class="fl ">
+        	<li class="ll">
+            	<img src="img/38.png"/>
+            </li>
+            <li class="lia clearfix">
+            	<span class="shu fl">2</span>
+                <b class="zi fl">大汉情缘之云中歌</b>
+                <div class="fl clearfix">
+                	<i class="i1 fl"></i>
+                    <span class="sb fl">423.27万</span>
+                </div>
+            </li>
+            <li class="lib clearfix">
+            	<span class="shu fl">3</span>
+                <b class="zi fl">大汉情缘之云中歌</b>
+                <div class="fl clearfix">
+                	<i class="i1 fl"></i>
+                    <span class="sb fl">423.27万</span>
+                </div>
+            </li>
+            <li class="lia clearfix">
+            	<span class="shu fl">4</span>
+                <b class="zi fl">大汉情缘之云中歌</b>
+                <div class="fl clearfix">
+                	<i class="i1 fl"></i>
+                    <span class="sb fl">423.27万</span>
+                </div>
+            </li>
+         	<li class="lib clearfix">
+            	<span class="shu fl">5</span>
+                <b class="zi fl">大汉情缘之云中歌</b>
+                <div class="fl clearfix">
+                	<i class="i1 fl"></i>
+                    <span class="sb fl">423.27万</span>
+                </div>
+            </li>
+            <li class="lia clearfix">
+            	<span class="shu fl">6</span>
+                <b class="zi fl">大汉情缘之云中歌</b>
+                <div class="fl clearfix">
+                	<i class="i1 fl"></i>
+                    <span class="sb fl">423.27万</span>
+                </div>
+            </li>
+            <li class="lib clearfix">
+            	<span class="shu fl">7</span>
+                <b class="zi fl">大汉情缘之云中歌</b>
+                <div class="fl clearfix">
+                	<i class="i1 fl"></i>
+                    <span class="sb fl">423.27万</span>
+                </div>
+            </li>
+            <li class="lia clearfix">
+            	<span class="shu fl">8</span>
+                <b class="zi fl">大汉情缘之云中歌</b>
+                <div class="fl clearfix">
+                	<i class="i1 fl"></i>
+                    <span class="sb fl">423.27万</span>
+                </div>
+            </li>
+         	<li class="lib clearfix">
+            	<span class="shu fl">9</span>
+                <b class="zi fl">大汉情缘之云中歌</b>
+                <div class="fl clearfix">
+                	<i class="i1 fl"></i>
+                    <span class="sb fl">423.27万</span>
+                </div>
+            </li>
+            <li class="lia clearfix">
+            	<span class="shu fl">8</span>
+                <b class="zi fl">大汉情缘之云中歌</b>
+                <div class="fl clearfix">
+                	<i class="i1 fl"></i>
+                    <span class="sb fl">423.27万</span>
+                </div>
+            </li>
+        </ul>
+        <h3>电视剧筛选</h3>
+        <ul class="sx">
+        	<li><span><a href="#">类型：</a></span><span><a href="#">偶像</a></span><span><a href="#">都市</a></span><span><a href="#">谍战</a></span><span><a href="#">古装</a></span></li>
+            <li><span><a href="#">类型：</a></span><span><a href="#">偶像</a></span><span><a href="#">都市</a></span><span><a href="#">谍战</a></span><span><a href="#">古装</a></span></li>
+            <li><span><a href="#">类型：</a></span><span><a href="#">偶像</a></span><span><a href="#">都市</a></span><span><a href="#">谍战</a></span><span><a href="#">古装</a></span></li>
+            <li><span><a href="#">类型：</a></span><span><a href="#">偶像</a></span><span><a href="#">都市</a></span><span><a href="#">谍战</a></span><span><a href="#">古装</a></span></li>
+        </ul>
+       </div>
+    </div>
+<div class="yg w">
+   <div class="hehe-3 w clearfix">
+     <h2 class="fl">
+    	<a href="#"> 电影.预告片
+            <span class="sp">更多>></span>
+        </a>
+     </h2>
+   		<span class="spa fr">
+    	<a href="#">电影.专题</a>
+        </span>
+    </div>
+   <ul class="ul1 w clearfix">
+   		<li class="li1 tu fl">
+        	<a href="#">
+            	<img src="img/44.png"/>
+            </a>
+            <p>《蚁人》</p>
+        </li>
+        <li class="li1 tu fl">
+        	<a href="#">
+            	<img src="img/45.png"/>
+            </a>
+            <p>《我是证人》</p>
+        </li>
+        <li class="li1 tu fl">
+        	<a href="#">
+            	<img src="img/46.png"/>
+            </a>
+            <p>《绝命海拔》</p>
+        </li>
+        <li class="li1 tu fl">
+        	<a href="#">
+            	<img src="img/47.png"/>
+            </a>
+            <p>《007：幽灵党》</p>
+        </li>
+        <li class="li2 fl">
+        	<a href="#">
+            	<img src="img/48.png"/>
+            </a>
+            <p>亿万票房女主白百合的尚未历史</p>
+        </li>
+   </ul>
+</div>
+<div class="zy w clearfix">
+	<div class="hehe5 w clearfix">
+		<h2 class="fl">
+            <a href="#"> 综艺
+                <span class="sp7">热门</span>
+                <span class="sp8">选秀</span>
+                <span class="sp8">情感</span>
+                <span class="sp8">访谈</span>
+                <span class="sp9">更多>></span>
+            </a>
+        </h2>
+   	    <span class="spa fr">
+    		<a href="#">人气综艺榜</a>
+        </span>
+    </div>
+    <div class="hehe6">
+        <ul class="clearfix fl">
+            <li class="fl">
+                <img src="img/49.png"/>
+                <p class="p1">奔跑吧兄弟 第三季</p>
+                <p class="p2">包男团不死名牌比猜疑开宴席行会</p>
+            </li>
+            <li class="li-3 fl clearfix">
+                <ul class="ul2 fl clearfix">
+                    <li class="li1 fl">
+                        <a href="#"><img src="img/50.png"/></a>                    
+                        <p class="pa">女子餐厅被盗绑架</p> 
+                        <p class="pb">女子餐厅被盗绑架</p>                            
+                    </li>
+                    <li class="li1 fl">
+                        <a href="#"><img src="img/51.png"/></a>
+                        <p class="pa">女子餐厅被盗绑架</p>
+                        <p class="pb">女子餐厅被盗绑架</p> 
+                    </li>
+                    <li class=" fl">
+                        <a href="#"><img src="img/53.png"/></a>
+                        <p class="pa">女子餐厅被盗绑架</p>
+                        <p class="pb">女子餐厅被盗绑架</p> 
+                    </li>
+                    <li class=" fl">
+                        <a href="#"><img src="img/54.png"/></a>
+                        <p class="pa">女子餐厅被盗绑架</p>
+                        <p class="pb">女子餐厅被盗绑架</p> 
+                    </li>
+                </ul>
+        </li>
+        	<ul class="cc fl">
+                    <li class="ll">
+                        <img src="img/52.png"/>
+                    </li>
+                    <li class="lia clearfix">
+                        <span class="shu fl">2</span>
+                        <b class="zi fl">大汉情缘之云中歌</b>
+                        <div class="fl clearfix">
+                            <i class="i1 fl"></i>
+                            <span class="sb fl">423.27万</span>
+                        </div>
+                    </li>
+              
+                    <li class="lia clearfix">
+                        <span class="shu fl">3</span>
+                        <b class="zi fl">大汉情缘之云中歌</b>
+                        <div class="fl clearfix">
+                            <i class="i1 fl"></i>
+                            <span class="sb fl">423.27万</span>
+                        </div>
+                    </li>
+                    <li class="lia clearfix">
+                        <span class="shu fl">4</span>
+                        <b class="zi fl">大汉情缘之云中歌</b>
+                        <div class="fl clearfix">
+                            <i class="i1 fl"></i>
+                            <span class="sb fl">423.27万</span>
+                        </div>
+                    </li>
+              
+                    <li class="lia clearfix">
+                        <span class="shu fl">5</span>
+                        <b class="zi fl">大汉情缘之云中歌</b>
+                        <div class="fl clearfix">
+                            <i class="i1 fl"></i>
+                            <span class="sb fl">423.27万</span>
+                        </div>
+                    </li>
+                    <li class="lia clearfix">
+                        <span class="shu fl">6</span>
+                        <b class="zi fl">大汉情缘之云中歌</b>
+                        <div class="fl clearfix">
+                            <i class="i1 fl"></i>
+                            <span class="sb fl">423.27万</span>
+                        </div>
+                    </li>
+              
+                    <li class="lia clearfix">
+                        <span class="shu fl">7</span>
+                        <b class="zi fl">大汉情缘之云中歌</b>
+                        <div class="fl clearfix">
+                            <i class="i1 fl"></i>
+                            <span class="sb fl">423.27万</span>
+                        </div>
+                    </li>
+            </ul>
+        </ul>
+    </div>
+</div>
+<div class="dm w clearfix">
+	<div class="haha w clearfix">
+		<h2 class="fl">
+            <a href="#"> 动漫
+                <span class="sp7">热门</span>
+                <span class="sp8">选秀</span>
+                <span class="sp8">情感</span>
+                <span class="sp8">访谈</span>
+                <span class="sp9">更多>></span>
+            </a>
+        </h2>
+   	    <span class="spa fr">
+    		<a href="#">每日更新</a>
+        </span>
+    </div>
+    <div class="hehe7">
+        <ul class="clearfix fl">
+            <li class="fl">
+                <img src="img/55.png"/>
+                <p class="p1">海绵宝宝</p>
+                <p class="p2">我最爱的海绵宝宝</p>
+            </li>
+            <li class="li-3 fl clearfix">
+                <ul class="ul2 fl clearfix">
+                    <li class="li1 fl">
+                        <a href="#"><img src="img/56.png"/></a>                    
+                        <p class="pa">女子餐厅被盗绑架</p> 
+                        <p class="pb">女子餐厅被盗绑架</p>                            
+                    </li>
+                    <li class="li1 fl">
+                        <a href="#"><img src="img/57.png"/></a>
+                        <p class="pa">女子餐厅被盗绑架</p>
+                        <p class="pb">女子餐厅被盗绑架</p> 
+                    </li>
+                    <li class=" fl">
+                        <a href="#"><img src="img/58.png"/></a>
+                        <p class="pa">女子餐厅被盗绑架</p>
+                        <p class="pb">女子餐厅被盗绑架</p> 
+                    </li>
+                    <li class=" fl">
+                        <a href="#"><img src="img/59.png"/></a>
+                        <p class="pa">女子餐厅被盗绑架</p>
+                        <p class="pb">女子餐厅被盗绑架</p> 
+                    </li>
+                </ul>
+        </li>
+        	<li class="fl">
+            	<img src="img/1111_03.png"/>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="dj w clearfix">
+	<div class="haha1 w clearfix">
+		<h2 class="fl">
+            <a href="#">独家策划
+                <span class="sp8">明星剧场</span>
+                <span class="sp8">音乐会</span>
+                <span class="sp8">体坛荷尔蒙</span>
+                <span class="sp8">高校联盟</span>
+                <span class="sp7">美女时尚</span>
+            </a>
+        </h2>
+     </div>
+    <div class="ha2 clearfix">
+     	<ul class="fl clearfix">
+        	<li class="fl"><img src="img/60.png"></li>
+            <li class="fl"><img src="img/19.png"></li>
+            <li class="fl"><img src="img/60.png"></li>
+            <li class="fl"><img src="img/22.png"></li>
+            <li class="fl"><img src="img/60.png"></li>
+            <li class="fl"><img src="img/24.png"></li>
+        </ul>
+        <img src="img/21.png"/>
+     </div>
+</div>
+<div class="di w">
+<ul class="dd clearfix w" >
+	<li class="li22 fl">意见反馈</li>
+    <li class="fl">意见反馈</li>
+    <li class="fl">意见反馈</li>
+    <li class="fl">意见反馈</li>
+    <li class="fl">意见反馈</li>
+    <li class="fl li11">意见反馈</li><br/>
+</ul>
+<p>360安全网址就快写完了 浙IPC5558555信息传媒1555号</p>
+</body>
+</html>

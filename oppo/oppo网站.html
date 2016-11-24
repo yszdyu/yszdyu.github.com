@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/base.css" rel="stylesheet">
+<style>
+.header{ width:1332px; height:37px; margin:0 auto; background:#2b2b2b; border-top:3px solid #00925f;}
+.header ul .left-1 .sp1{ display:block;width:20px; height:16px; background:url(img/icons.png)  no-repeat -266px -3px; float: left;margin:10px 15px 11px 77px;}
+.header ul .left-1 .sp2{ display:block;width:15px; height:20px; background:url(img/icons.png)  no-repeat -318px -2px; float: left; margin:10px 18px 7px 0;}
+.header ul .left-1 .sp3{ font-size:11px; font-weight:bold; color:#00925f; line-height:37px;}
+.header ul .left-2 .sp4{ float:left;}
+.header ul .left-2 .sp5{border-right:1px solid #474747; float:left; line-height:37px;}
+.header ul .left-2 .sp4 a{ font-size:11px; color:#b2b2b2; line-height:37px;padding:0 14px;border-right:1px solid #474747;}
+.header ul .left-2 .sp5 a{font-size:11px; color:#b2b2b2; margin-right:76px; margin-left:10px;}
+.header ul .left-2 a .sp6{ display:block;width:19px; height:16px; background: url(img/che.png) no-repeat; margin-top:11px; margin-left:14px;}
+.logo{ border-bottom:3px solid #dadada;}
+.logo .logo-l h1 { width:168px; height:25px;background:url(img/icons.png) no-repeat 0 0; text-indent:-999em;margin:32px 0 27px 76px;}
+.logo .logo-r span{ float:left; display:block;font-size:12px; color:#2b2b2b; font-weight:bold; margin:39px 40px 34px 0;}
+.logo .logo-r .sp{ margin-right:57px;}
+.lyf img{ width:1332px; height:617px;margin:0 auto; position: relative; border-bottom:1px solid #b2b2b2;}
+.lyf .ops{ width:321px; height:438px;background: url(img/rs.png) no-repeat; position:absolute; left:520px; top:300px;}
+.lyf .opa{ width:100%; height:70px;position:absolute; left:0; top:677px;background:#fff; opacity:.4; filter: alpha( opacity=40);}
+.lyf .opa-2{ width:57px; height:15px; background:url(img/icons.png) no-repeat -259px -929px;position:absolute; left:637px; top:703px; z-index:1;}
+.star{ width:1332px; height:120px;margin:0 auto;}
+.star .star-1{display:block;width:287px; height:78px; background:url(img/icons.png) no-repeat -1px -708px; margin-left:524px; line-height:173px;margin-top:52px;}
+.phone{ width:1332px; height:549px;margin:0 auto; margin-bottom:60px;}
+.phone .phone-2{ margin-left:76px;}
+.phone .phone-2 .phone-3{ width:280px; text-align:center;}
+.phone .phone-2 li{ margin-right:10px; margin-left:9px;}
+.phone .phone-2 .phone-3 .p-top{margin-top:18px; margin-bottom:15px;}
+.phone .phone-2 .phone-3 .p-cen{margin-bottom:15px;}
+.phone .phone-2 .phone-3 .p-bot{padding-bottom:28px; margin-left:84px;}
+.phone .phone-2 .phone-3 .p1{ font-size:17px; color:#2b2b2b; font-weight:bold;}
+.phone .phone-2 .phone-3 .p2{ font-size:11px; color:#b4b4b4;}
+.phone .phone-2 .phone-3 .p3{ font-size:11p; color:#00925f;}
+.phone .phone-2 .phone-3 .p3 .sp-2{ display:block; width:13px; height:13px; background:url(img/icons.png) no-repeat -177px -1014px; left:189px;}
+.phone .phone-2 .phone-3 .p4{ border-bottom:5px solid #dfdfdf;}
+.Ess{ width:1332px; margin:0 auto; margin-bottom:46px; }
+.Ess p{ width:90px; border-bottom:1px solid #CCC; margin-left:622px;}
+.Ess img{ margin-left:474px;}
+.pj{ width:1200px; height:100%; margin:0 auto; margin-bottom:50px;}
+.pj .left-a{ width:591px; height:876px; margin-left:16px;float:left;}
+.pj .left-a .left-top{ width:280px; height:575px; border-bottom:5px solid #e1e1e1; background:#f6f6f6; margin-bottom:10px;}
+.pj .left-a .left-top img{ margin:40px 43px 43px 42px;}
+.pj .left-a .left-top p{ text-align:center;}
+.pj .left-a .left-top .p1{ font-size:14px; color:#7e7e7e; margin-bottom:9px;}
+.pj .left-a .left-top .p2{ font-size:22px; color:#545454; font-weight:bold; margin-bottom:14px;}
+.pj .left-a .left-top .p3{ font-size:11px; color:#058d5d;margin-bottom:35px;}
+.pj .left-a .right-a .r-top{ width:270px; height:270px; border:5px solid #eaeaea; margin-left:20px; margin-bottom:15px;text-align:center;}
+.pj .left-a .right-a .r-top h3{ font-size:12px; color:#576267; font-weight:bold; margin-bottom:23px; margin-top:23px;}
+.pj .left-a .right-a .r-top .pp{ width:210px; border-bottom:2px solid #e6e6e6; margin-left:30px; margin-bottom:20px;}
+.pj .left-a .right-a .r-top img{ margin-left:41px;}
+.pj .left-a .right-a .r-top .he{ margin-bottom:37px;}
+.pj .left-a .right-a .r-top .q{ font-size:11px; color:#00925f; margin-left:102px;}
+.pj .left-a .right-a .r-top .he-1{ display:block;width:13px; height:13px; background:url(img/icons.png) no-repeat -177px -1014px; margin-left:4px;}
+.pj .right-b{ width:580px; height:100%;}
+.pj .left-a .right-a .r-bot{ width:280px; height:270px; border-bottom:5px solid #e1e1e1; background:#f6f6f6; margin-left:20px;}
+.pj .left-a .right-a .r-bot img{ margin:13px 33px 10px 33px;}
+.pj .left-a .right-a .r-bot p{ text-align:center;}
+.pj .left-a .right-a .r-bot .pa{ font-size:17px; color:#4d4d4d; font-weight:bold; margin-bottom:10px;}
+.pj .left-a .right-a .r-bot .pb{ font-size:11px; color:#00945e;}
+.pj .right-b img{ width:580px; height:270px; border:2px solid #f6f6f6;border-bottom:5px solid #e1e1e1;  margin-top:20px;}
+.pj .right-1{ float:left; width:590px; height:876px;}
+.pj .right-s img{width:580px; height:270px; border:2px solid #f6f6f6;border-bottom:5px solid #e1e1e1; margin-bottom:20px;}
+
+.pj .right-1 .left-top{ width:280px; height:565px;background:##f6f6f6; border:1px solid #f6f6f6; border-bottom:5px solid #e1e1e1;}
+.pj .right-1 .left-top img{ margin:20px 23px 43px 12px;}
+.pj .right-1 .left-top p{ text-align:center;}
+.pj .right-1 .left-top .p1{ font-size:14px; color:#7e7e7e; margin-bottom:9px;}
+.pj .right-1 .left-top .p2{ font-size:22px; color:#545454; font-weight:bold; margin-bottom:14px;}
+.pj .right-1 .left-top .p3{ font-size:11px; color:#058d5d;margin-bottom:35px;}
+
+.pj .right-1 .right-top .r-bot{ width:280px; height:275px; border:2px solid #f6f6f6;border-bottom:5px solid #e1e1e1; background:#f6f6f6; margin-left:20px; margin-bottom:10px;}
+.pj .right-1 .right-top .r-bot img{ margin:13px 30px 10px 36px;}
+.pj .right-1 .right-top .r-bot .bbb{ margin:13px 0 10px 50px;}
+.pj .right-1 .right-top .r-bot p{ text-align:center;}
+.pj .right-1 .right-top .r-bot .pa{ font-size:17px; color:#4d4d4d; font-weight:bold; margin-bottom:10px;}
+.pj .right-1 .right-top .r-bot .pb{ font-size:11px; color:#00945e;}
+.OF{ width:1332px; margin:0 auto; border-top:3px solid #d9d9d9;}
+.OF .pa{width:90px; border-bottom:1px solid #CCC; margin-top:40px;margin-left:622px; margin-bottom:13px;}
+.OF .pb{width:90px; border-bottom:1px solid #CCC; margin-top:12px;margin-left:622px; margin-bottom:40px;}
+.OF img{ margin-left:474px;}
+.bot{ width:1200px; margin:0 auto;}
+.bot .left-bot{ width:800px; height:560px;}
+.bot .left-bot img{ display:block; margin-right:20px;}
+.bot .left-bot .img1{ display:block; margin-bottom:20px;}
+.bot .left-bot .img2{ display:block; margin-bottom:20px;}
+.bot .right-bot{ width:384px; height:557px; border-left:2px solid #eaeaea;border-right:2px solid #eaeaea;border-bottom:2px solid #eaeaea; margin-bottom:60px;}
+.bot .right-bot .spa1{ width:190px; height:47px; border:1px solid #FFF;border-top:2px solid #00925f; text-align:center; line-height:48px; font-size:17px; color:#a7a7a7;}
+.bot .right-bot .spa2{ width:190px; height:48px; border:1px solid #FFF; border-right:none;text-align:center; line-height:48px; background:#dadada; font-size:17px; color:#a7a7a7;}
+.bot .right-bot .p1{ margin-bottom:45px;}
+.bot .right-bot li{ margin-left:30px; margin-bottom:15px;}
+.bot .right-bot li p{font-size:11px; color:#838394; background:#f6f6f6; padding:19px 15px 43px 15px;}
+.footer{ width:1332px; margin:0  auto;}
+.footer .fot{ width:1180px; height:118px;background:url(img/icons.png) no-repeat -244px -541px; margin:0 auto;}
+.footer .fo{ display:block; border-bottom:1px solid #eaeaea;}
+.footer-1 { width:1332px; margin:0 auto; margin-bottom:59px;}
+.footer-1 .fo{ margin-left:77px; margin-top:30px; margin-right:60px;}
+.footer-1 .fo h3{ font-size:12px; color:#373737; font-weight:bold; margin-bottom:22px;}
+.footer-1 .fo p{ font-size:11px; color:#838383;margin-bottom:17px;}
+.footer-1 .fo img{ display:block; margin-right:4px;}
+.footer-1 .fo li span .pg{ font-size:22px; color:#409f73; font-weight:bold;}
+.bott{ width:1332px; height:70px; margin:0 auto;background:#2b2b2b; border-top:5px solid #000;}
+.bott .bott-l .san{ display:block; width:99px; height:19px; background:url(img/icons.png) no-repeat -440px 0;margin-left:76px; margin-right:21px; margin-top:28px;}
+.bott .bott-l .zi{ font-size:11px; color:#828282; line-height:70px;}
+.bott .bott-r span{ display:block;font-size:px; color:#e2e2e2; float:left; line-height:70px; margin-right:40px;}
+</style>
+</head>
+
+<body>
+<div  class="header">
+	<ul class="clearfix">
+    	<li class="left-1 fl">	
+        	<span class="sp1"></span>
+            <span class="sp2"></span>
+            <span class="sp3">4001-666-888</span>
+        </li>
+         <li class="left-2 fr"> 
+        	<span class="sp4"><a href="#">登录</a></span>
+            <span class="sp4"><a href="#">注册</a></span>
+            <span class="sp4"><a href="#">积分兑换</a></span>
+            <span class="sp4"><a href="#">帮助中心</a></span>
+            
+            <span class="sp5 clearfix"><a href="#"><span class="sp6 fl"></span>购物车</a></span>
+        </li>
+    </ul>
+</div>
+<div class="logo clearfix w">
+	<div class="logo-l fl">
+    	<h1><a href="#">oppo</a></h1>
+    </div>
+     <div class="logo-r fr">
+    	<span>首页</span>
+        <span>手机</span>
+        <span>配件</span>
+        <span>服务</span>
+        <span>体验店</span>
+        <span>软件商店</span>
+        <span>ColorOS</span>
+        <span class="sp">社区</span>
+    </div>
+</div>
+<div class="lyf">
+	<img src="img/20150202100021_PPLCdk.jpg"/>
+    <div class="ops"></div>
+    <div class="opa"></div>
+    <div class="opa-2"></div>
+</div>
+<div class="star">
+	<span class="star-1"></span>
+</div>
+<div class="phone">
+	<ul class="phone-2 clearfix">
+    	<li class="phone-3 fl clearfix">
+        	<img src="img/n3.png"/>
+            <img src="img/pic-s.png"/>
+            <p class="p-top"><a class="p1" href="#">N3</a></p>
+            <p class="p-cen"><a class="p2" href="#">1600万电动旋转摄像头</a></p>
+            <p class="p-bot"><a class="p3 fl" href="#">&yen;3999&nbsp;立刻购买&nbsp;<span class="sp-2 fr"></span></a></p>
+            <p class="p4"></p>
+        </li>
+        <li class="phone-3 fl clearfix">
+        	<img src="img/r5.png"/>
+            <img src="img/pic-s.png"/>
+            <p class="p-top"><a class="p1" href="#">R5</a></p>
+            <p class="p-cen"><a class="p2" href="#">薄至4.85mm</a></p>
+            <p class="p-bot"><a class="p3 fl" href="#">&yen;2999&nbsp;立刻购买&nbsp;<span class="sp-2 fr"></span></a></p>
+            <p class="p4"></p>
+        </li>
+        <li class="phone-3 fl clearfix">
+        	<img src="img/20140319154524jUOVBkgi1v.jpg"/>
+            <img src="img/pic-s.png"/>
+            <p class="p-top"><a class="p1" href="#">Find7</a></p>
+            <p class="p-cen"><a class="p2" href="#">4g全能旗舰</a></p>
+            <p class="p-bot"><a class="p3 fl" href="#">&yen;2999&nbsp;立刻购买&nbsp;<span class="sp-2 fr"></span></a></p>
+            <p class="p4"></p>
+        </li>
+        <li class="phone-3 fl clearfix">
+        	<img src="img/ric.png"/>
+            <img src="img/pic-s.png"/>
+            <p class="p-top"><a class="p1" href="#">R1C</a></p>
+            <p class="p-cen"><a class="p2" href="#">钻石流光镜面</a></p>
+            <p class="p-bot"><a class="p3 fl" href="#">&yen;2499&nbsp;立刻购买&nbsp;<span class="sp-2 fr"></span></a></p>
+            <p class="p4"></p>
+        </li>
+    </ul>
+</div>
+<div class="Ess">
+	<p></p>
+	<img src="img/11.png"/>
+    <p></p>
+</div>
+<div class="pj clearfix">
+	<div class="left-a fl">
+    	<div class="left-top fl">
+        	<img src="img/pi.png"/>
+        	<p class="p1">世界触手可及</p>
+            <p class="p2">OPPOFind7视窗保护皮套</p>
+            <p class="p3">&yen;198.00</p>
+        </div>
+        <div class="right-a fl">
+        	<div class="r-top clearfix">
+            	<h3>oppo手机官网ACCESSORY配件</h3>
+                <p  class="pp"></p>
+               	<img src="img/5.png"/>
+                <p class="pp"></p>
+                <p class=""><a  class="q fl" href="#">全部配件</a><span class="he-1 fl"></span></p>
+            </div>
+            <div class="r-bot fl">
+            	<img src="img/cdq.png"/>
+                <p class="pa">oppo原装电池适配器</p>
+                <p class="pb">&yen;58.00</p>
+            </div>
+        </div>
+        <div class="right-b">
+    		<img src="img/usb.png"/>
+        </div>
+    </div>
+    <div class="right-1 fl clearfix">
+    	 <div class="right-s fl">
+    		<img src="img/sc.png"/>
+         </div>
+ 		 <div class="left-top fl">
+        	<img src="img/em.png"/>
+        	<p class="p1">全金属蓝牙耳机</p>
+            <p class="p2">让精简更经典套</p>
+            <p class="p3">&yen;198.00</p>
+        </div>
+         <div class="right-top">
+        	<div class="r-bot fl">
+            	<img src="img/ej.png"/>
+                <p class="pa">oppo原装高品质耳机</p>
+                <p class="pb">&yen;58.00</p>
+            </div>
+            <div class="r-bot fl">
+            	<img class="bbb"src="img/ly.png"/>
+                <p class="pa">oppo蓝牙耳机</p>
+                <p class="pb">&yen;58.00</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="OF">
+	<p class="pa"></p>
+   <img src="img/ts.png"/>
+    <p class="pb"></p>
+</div>
+<div class="bot clearfix">
+	<div class="left-bot fl clearfix">
+    	<span class="fl">
+            <img class="img1" src="img/jf.png"/>
+            <img src="img/fqfk.png"/>
+        </span>
+        <span class="fl">
+            <img class="img2" src="img/hdfk.png"/>
+            <img src="img/sj.png"/>
+        </span>
+    </div>
+     <div class="right-bot fl clearfix">
+    	<p class=" p1 clearfix"><span class="spa1 fl">新闻</span><span class="spa2 fl">微博</span></p>
+         <ul>
+        	<li class="clearfix">
+            	<div class="fl" >
+            		<img src="img/a.png"/>
+                </div>
+                <p class="fl clearfix">
+                        业界革命，oppo发布全球最高灵敏度<br/>
+                        平面振膜耳机
+                </p>
+            </li>
+            <li class="clearfix">
+            	<div class="fl" >
+            		<img src="img/b.png"/>
+                </div>
+                <p class="fl clearfix">
+                        业界革命，oppo发布全球最高灵敏度<br/>
+                        平面振膜耳机
+                </p>
+            </li>
+            <li class="clearfix">
+            	<div class="fl" >
+            		<img src="img/c.png"/>
+                </div>
+                <p class="fl clearfix">
+                        业界革命，oppo发布全球最高灵敏度<br/>
+                        平面振膜耳机
+                </p>
+            </li>
+            <li class="clearfix">
+            	<div class="fl" >
+            		<img src="img/d.png"/>
+                </div>
+                <p class="fl clearfix">
+                        业界革命，oppo发布全球最高灵敏度<br/>
+                        平面振膜耳机
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="footer">
+	<div class="fot"></div>
+    <span class="fo"></span>
+</div>
+<div class="footer-1 clearfix">
+	 <div class="fo fl">
+           <h3>关于我们</h3>
+           <p>·新手指南</p>
+           <p>·网站地图</p>
+           <p>·意见反馈</p>
+     </div>
+     <div class="fo fl">
+           <h3>推荐机型</h3>
+           <p>·N3</p>
+           <p>·R5</p>
+           <p>·RIC</p>
+           <p>·Find7</p>
+     </div>
+      <div class="fo fl">
+           <h3>购物相关</h3>
+           <p>·帮助中心</p>
+           <p>·周边产品</p>
+           <p>·oppo体验店</p>
+           <p>·客户服务政策</p>
+     </div>
+     <div class="fo fl">
+           <h3>会员中心</h3>
+           <p>·产品注册</p>
+           <p>·会员注册</p>
+           <p>·会员登录</p>
+     </div>
+     <div class="fo fl">
+           <h3>关注我们</h3>
+           <li class="clearfix">
+           	<img class="fl" src="img/tx.png"/><p class="fl">新浪微博</p>
+           </li>
+           <li class="clearfix">
+           	<img class="fl" src="img/qq.png"/><p class="fl">腾讯微博</p>
+           </li>
+           <li class="clearfix">
+           	<img class="fl" src="img/rr.png"/><p class="fl">人人网</p>
+           </li>
+           <li class="clearfix">
+           	<img class="fl" src="img/qqqq.png"/><p class="fl">QQ空间</p>
+           </li>
+     </div>
+      <div class="fo fl">
+           <h3>联系我们</h3>
+           <li class="clearfix">
+           	<span class="fl"><img  src="img/dianhua.png"/></span>
+           	<span class="fl">
+                <p class="pg">4001-666-888</p>
+                <p>7*24小时客服电话</p>
+            </span>
+           </li>
+           <li class="clearfix">
+           	<span class="fl"><img  src="img/ke.png"/></span>
+           	<span class="fl">
+                <p class="pg">在线客服</p>
+                <p>服务时段：8：00-22：00</p>
+            </span>
+           </li>
+     </div>
+</div>
+<div class="bott">
+    <div class="bott-l fl clearfix">
+    	<span class="san fl"></span>
+        <span class="zi fl">2005-2015东婠是永盛科技有限公司版权所有</span>
+    </div>
+    <div class="bott-r fr">
+    	<span>版权说明</span>
+        <span>使用协议</span>
+        <span>网站地图</span>
+        <span>友情链接</span>
+        <span>联系我们</span>
+    </div>
+</div>
+</body>
+</html>

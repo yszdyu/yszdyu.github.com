@@ -2,23 +2,25 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>无标题文档</title>
-<style>
-	*{margin:0; padding:0; list-style:none;}
-	ul{ overflow:hidden; width:630px; margin:100px auto;}
-	ul li{ float:left; position:relative; width:200px; height:200px; background:#ccc; margin:5px; overflow:hidden;}
-	ul li span{ position:absolute;width:100%;height:100%;background:rgba(255,0,0,0.3);left:-200px; top:0;}
-</style>
-<script src="move.js"></script>
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1"/>
+<title>杨硕个人网站</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="base.css" rel="stylesheet"/>
+<script src="js/move4.js"></script>
+<script src="js/sound.js"></script>
+<script src="js/blast.js"></script>
 <script>
-	function a2d(n){
-		return n*180/Math.PI;	
-	};
-	function hoverDir(ev,obj){
-		var a = ev.clientX-obj.offsetLeft-obj.offsetWidth/2;
-		var b = obj.offsetTop+obj.offsetHeight/2-ev.clientY;
-		return Math.round((a2d(Math.atan2(b,a))+180)/90)%4;	
-	};
+	/*获取位置*/
+	function getPos(obj){
+	    var l = 0;
+	    var t = 0;
+	    while(obj){
+	        l += obj.offsetLeft;
+	        t += obj.offsetTop;
+	        obj = obj.offsetParent;
+	    }
+	    return {left:l,top:t}
+	}
 	function through(obj){
 		var oS = obj.children[0];
 		obj.onmouseenter = function(ev){
@@ -63,24 +65,545 @@
 			};	
 		};	
 	};
-	window.onload=function(){
-		var oLi = document.getElementsByTagName('li');
-		for(var i=0;i<oLi.length;i++){
-			through(oLi[i]);	
+	//穿墙
+	function a2d(n){
+		return n*180/Math.PI;	
+	};
+	function hoverDir(ev,obj){
+		var a = ev.pageX-getPos(obj).left-obj.offsetWidth/2;
+		var b = getPos(obj).top+obj.offsetHeight/2-ev.pageY;
+		return Math.round((a2d(Math.atan2(b,a))+180)/90)%4;	
+	};
+	//导航条选中封装
+	function kuang(obj){
+		obj.style.background = 'rgba(173,169,169,0.2)';
+		obj.style.boxShadow = 'inset 0 0 6px rgba(255,255,255,1)';
+		obj.style.color = '#FFF';	
+	}
+	window.onload = function(){
+		var bClock = false;
+		var oPage = document.getElementById('page');
+		kuang(oPage);
+		//进来播放歌曲
+		var oMoA = document.querySelectorAll('#header audio')[0];
+		var oGequ = document.getElementById('gequ');
+		oMoA.src = 'mp3/A Fine Frenzy-Almost Lover.mp3';
+		oMoA.play();
+		oGequ.innerHTML = 'A Fine Frenzy-Almost Lover';
+		//鼠标跟随
+		var oTo_top = document.getElementById('to_top');
+		document.onmousemove = function(ev){
+			var oEvent = ev||event;
+			oTo_top.style.left = oEvent.pageX+20+'px';
+			oTo_top.style.top = oEvent.pageY+20+'px';
 		};	
+		//导航条黑
+		var oHed = document.getElementById('header');
+		var oA = oHed.getElementsByTagName('a');
+		document.onscroll = function(){
+			var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+			if(scrollTop<=130){
+				oHed.style.background = 'rgba(173,169,169,0.2)';	
+			}else{
+				oHed.style.background = 'rgba(88,64,62,0.9)';
+				for(var i=0;i<oA.length;i++){
+					oA[i].style.color = 'rgba(255,255,255,.9)';		
+				}
+				if(bClock)return;
+				if(scrollTop>=0&&scrollTop<760){
+					kuang(oPage);
+					oResume.style= 'none';
+					
+				}else if(scrollTop>=760&&scrollTop<1440){
+					kuang(oResume);
+					oPage.style= 'none';
+					oAppreciate.style= 'none';
+				}else if(scrollTop>=1441&&scrollTop<2000){
+					kuang(oAppreciate);
+					oResume.style= 'none';
+					oPage.style= 'none';
+							
+				}
+			}	
+		};
+		//羊出来
+		var oDown = document.getElementById('down');
+		var oHomepage = document.getElementById('homepage');
+		var oH1 = document.getElementsByTagName('h1')[0];
+		var n=0;
+		var oStimer = null;
+		var oSlogan = document.getElementById('Slogan');
+		var oDiv = oSlogan.getElementsByTagName('div')[0];
+		var oP = oSlogan.getElementsByTagName('p')[0];
+		var str = 'Welcome to the big black sheep website';
+		//move(oH1,{height:400},{duration:2000,complete:WZD});
+		//doMove(oH1,{top:0},{});
+		//move(oH1);
+		doMove(oH1,{top:0},{time:1000,duration:2000,complete:WZD});
+		function WZD(){
+			for(var i=0;i<str.length;i++){
+				var oSpan = document.createElement('span');
+				oSpan.innerHTML=str.charAt(i);
+				oSpan.style.opacity=0;
+				oDiv.appendChild(oSpan);
+			}
+			oStimer=setInterval(function(){
+				move(oDiv.children[n],{opacity:1});
+				n++;
+				if(n==oDiv.children.length){
+					clearInterval(oStimer);
+				}
+				move(oP,{opacity:1});
+				move(oDown,{opacity:1});
+			},30);		
+		};
+		//时钟
+			var oImg = oP.getElementsByTagName('img');
+			function toDou(a){
+				return a<10?'0'+a:''+a;
+				};
+			function clock(){
+				var oDate = new Date;
+				var h= oDate.getHours();
+				var m= oDate.getMinutes();
+				var s= oDate.getSeconds();
+				var str=''+toDou(h)+'p'+toDou(m)+'p'+toDou(s)+'';
+				for(var i=0;i<oImg.length;i++){
+					oImg[i].src='img/'+str.charAt(i)+'.png';
+				   }
+				}
+			clock();
+			setInterval(clock,1000);
+		//帮助
+		var oHelp = document.getElementById('help');
+		var oBangzhu = document.getElementById('bangzhu');
+		oHelp.onmouseover = function(){
+			oBangzhu.style.display = 'block';
+			oHelp.style.background = 'rgba(173,169,169,0.2)';
+			oHelp.style.boxShadow = 'inset 0 0 6px rgba(255,255,255,1)';
+			oHelp.style.color = '#FFF';		
+		};
+		oHelp.onmouseout = function(){
+			oBangzhu.style.display = 'none';
+			oHelp.style = 'none';
+		};
+		//音乐播放
+		var oMusic = document.getElementById('music');
+		var oLeibiao = document.getElementById('leibiao');
+		var oMarr = ['A Fine Frenzy-Almost Lover','Alan Walker-Faded','Love Me Like You Do','海阔天空-Beyond','王力宏 - 改变自己 (Live)','王力宏卢巧音 - 好心分手'];
+		var oMoP = document.querySelectorAll('#leibiao p');
+		var oBeijyy = oMusic.getElementsByTagName('a')[0];
+		var oMoA = document.querySelectorAll('#header audio')[0];
+		var oTubofang = document.getElementById('bf');
+		//点击播放的图片
+		var b=true;
+		oTubofang.onclick = function(){
+			if(b){
+				oMoA.pause();
+				oTubofang.src = 'img/bofang.png';
+				for(var i=0;i<oMoP.length;i++){
+					oMoP[i].className = '';
+				}	
+			}else{
+				oMoA.play();
+				oTubofang.src = 'img/zanting.png';
+				oMoP[iNow].className = 'on';		
+			}
+			b=!b;
+		};
+		var iNow = 0;
+		oMusic.onmouseover = function(){
+			leibiao.style.display = 'block';
+			oMusic.style.background = 'rgba(173,169,169,0.2)';
+			oMusic.style.boxShadow = 'inset 0 0 6px rgba(255,255,255,1)';
+			oMusic.style.color = '#FFF';
+			for(var i=0;i<oMoP.length;i++){
+				;(function(index){
+					oMoP[i].onclick = function(){
+						iNow = index;
+						tab();
+						leibiao.style.display = 'none';
+					};
+				})(i);
+			}
+			function tab(){
+				for(var i=0;i<oMoP.length;i++){
+					oMoP[i].className = '';
+				}
+				oMoP[iNow].className = 'on';
+				oMoA.src = 'mp3/'+oMarr[iNow]+'.mp3';
+				oMoA.play();
+				oTubofang.src = 'img/zanting.png';
+				oGequ.innerHTML = oMarr[iNow];
+			};	
+		};
+		oMusic.onmouseout = function(){
+			leibiao.style.display = 'none';	
+			oBeijyy.style.color = 'rgba(255,255,255,0.901961)';
+			oMusic.style= 'none';
+		};
+		/*
+			//钢琴效果
+		var oHed_ul = oHed.getElementsByTagName('ul')[0];
+		var oHed_ul_li = oHed_ul.getElementsByTagName('li');
+		var oHed_ul_mp = document.querySelectorAll('#header audio')[0];
+		for(var i=0; i<oHed_ul_li.length; i++){
+			;(function(index){
+				oHed_ul_li[index].onmouseenter = function(){
+					var num=index+49;
+					oHed_ul_mp.src=oggSound['sound'+num];
+					oHed_ul_mp.play();
+				};
+			})(i);
+		}
+		*/
+		//退出
+		var oQuit = document.getElementById('quit');
+		var oTuichu = document.getElementById('tuichu');
+		var oOpc = document.getElementById('opc');
+		var oTCoa2 = oTuichu.getElementsByTagName('a')[1];
+		var oTCoa1 = oTuichu.getElementsByTagName('a')[0];
+		var oTCoi = oTuichu.getElementsByTagName('i')[0];
+		oQuit.onclick = function(){
+			//确定退出吗
+			oTuichu.style.display = 'block';
+			oOpc.style.display = 'block';
+		};
+		oTCoa2.onclick = oTCoi.onclick = function(){
+			oTuichu.style.display = 'none';
+			oOpc.style.display = 'none';	
+		};
+		oTCoa1.onclick = function(){
+			window.close();
+		};
+		//点击简历头像羊爆炸
+		blast();
+		//点击span滑动
+		function move1(scrollTop,target,duration,fn){
+				var dis = target-scrollTop;
+				var n=0;
+				var count = Math.floor(duration/30);
+				var cur = dis/count;
+				timer = setInterval(function(){
+					n++;
+					document.documentElement.scrollTop = document.body.scrollTop= scrollTop+n*cur;
+					if(n>=count){
+						clearInterval(timer);
+						fn&&fn();
+					}
+				},30);
+			}
+		var oDown_btn = document.getElementById('down_btn');
+		var oResume = document.getElementById('resume');
+		var oContent = document.getElementById('content');
+		var oDown_btn2 = document.getElementById('down_btn2');
+		var timer = null;
+		oResume.onclick=oDown_btn.onclick = function(){
+			if(bClock)return;
+			bClock = true;
+			var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+			move1(scrollTop,760,600,function(){
+				bClock = false;
+				kuang(oResume);
+				oPage.style= 'none';
+			});
+			//oResume.style.background = 'rgba(173,169,169,0.2)';
+			//oResume.style.boxShadow = 'inset 0 0 6px rgba(255,255,255,1)';
+			//oResume.style.color = '#FFF';
+			kuang(oResume);
+			oPage.style= 'none';
+		};
+		var oAppreciate = document.getElementById('appreciate');
+		oAppreciate.onclick=oDown_btn2.onclick = function(){
+			if(bClock)return;
+			bClock=true;
+			var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+			move1(scrollTop,1450,600,function(){
+				bClock = false;	
+				oPage.style= 'none';
+				kuang(oAppreciate);
+				oResume.style= 'none';
+			});	
+		};
+		oPage.onclick = function(){
+			if(bClock)return;
+			bClock=true;
+			var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+			move1(scrollTop,0,600,function(){
+				bClock = false;	
+				kuang(oPage);
+				oResume.style= 'none';
+				oAppreciate.style= 'none';
+			});
+				
+		};
+		//穿墙
+		var oLook = document.getElementById('look');
+		var oLookDiv2 = oLook.getElementsByTagName('div')[1];
+		var oLookaA = oLookDiv2.getElementsByTagName('a');
+		var oChuanqiang = document.getElementById('chuanqiang');
+		var oXSaUL = oChuanqiang.getElementsByTagName('ul');
+		var oCQaLi = oChuanqiang.querySelectorAll('.ul1 li');
+		for(var i=0;i<oCQaLi.length;i++){
+			through(oCQaLi[i]);	
+		};
+		var oSanD = oChuanqiang.querySelectorAll('.ul2 li');
+		var oZHoUl = oChuanqiang.querySelector('.ul3');
+		var oZhiH = oChuanqiang.querySelectorAll('.ul3 li');
+		//3d指环
+		var N = 11;
+		for(var i=0;i<N;i++){
+			oZhiH[i].style.WebkitTransition = '1s all ease '+(N-i)*100+'ms';
+			
+			oZhiH[i].style.WebkitTransform = 'rotateY('+360/N*i+'deg) translateZ(200px)';
+		}
+	
+		//获取不到transform的值，用数字模拟
+		var x = 0; 			//x轴角度
+		var y = 0; 			//y轴角度
+		var iSpeedX = 0;
+		var iSpeedY = 0;
+		var lastX = 0;
+		var lastY = 0;
+		oZHoUl.onmousedown = function(ev){
+			var disX = ev.pageX-y;
+			var disY = ev.pageY-x;
+			document.onmousemove = function(ev){
+				x = ev.pageY-disY;
+				y = ev.pageX-disX;
+				
+				oZHoUl.style.WebkitTransform = 'perspective(800px) rotateY('+y/5+'deg) rotateX('+-x/5+'deg)';
+				
+				iSpeedX = ev.pageX-lastX;
+				iSpeedY = ev.pageY-lastY;
+				lastX = ev.pageX;
+				lastY = ev.pageY;
+			};
+			document.onmouseup = function(){
+				document.onmousemove = null;
+				document.onmouseup = null;
+				clearInterval(oZHoUl.timer);
+				oZHoUl.timer = setInterval(function(){
+					x+= iSpeedY;
+					y+= iSpeedX;
+					oZHoUl.style.WebkitTransform = 'perspective(800px) rotateY('+y/5+'deg) rotateX('+-x/5+'deg)';
+					iSpeedX*=0.95;
+					iSpeedY*=0.95;
+					if(Math.abs(iSpeedX)<1)iSpeedX=0;
+					if(Math.abs(iSpeedY)<1)iSpeedY=0;
+					if(iSpeedX==0&&iSpeedY==0){
+						clearInterval(oZHoUl.timer);
+					}
+				},30);
+			};
+			return false;
+		};
+		//选项卡
+		var s = 0;
+		var timer2=null;
+		for(var i=0;i<oLookaA.length;i++){
+			oLookaA[i].index=i;
+			oLookaA[i].onclick=function(){
+				s = this.index;
+			   XXK();
+			};
+		}
+		timer2=setInterval(function(){
+			s++;
+			if(s==3){
+				s=0;
+			}
+			XXK();
+		},3000)
+		function XXK(){
+			for(var i=0;i<oLookaA.length;i++){
+				oLookaA[i].className='';
+				oXSaUL[i].style.display='none';
+			}
+			oLookaA[s].className='se';
+			oXSaUL[s].style.display='block';
+		}
+		oChuanqiang.onmouseover=function(){
+			clearInterval(timer2);
+		};
+		oChuanqiang.onmouseout=function(){
+			timer2=setInterval(function(){
+				s++;
+				if(s>2){
+					s=0;
+				}
+				XXK();
+			},3000);
+		};
+		//滑动解锁的代码
+		var oJianli = document.getElementById('jianli');
+		var oJLoSp = oJianli.getElementsByTagName('span')[1];
+		var oJianli2 = document.getElementById('jianli2');
+		var oJLoSp2 = oJianli2.getElementsByTagName('span')[1];
+		var oJi = -40;
+		setInterval(function(){
+			oJi+=8;
+			oJLoSp.style.backgroundPosition = oJi+'px 0';
+			oJLoSp2.style.backgroundPosition = oJi+'px 0';
+		},30);
 	};
 </script>
 </head>
-<body>
-<div>
-	<ul>
-    	<li><span></span></li>
-        <li><span></span></li>
-        <li><span></span></li>
-        <li><span></span></li>
-        <li><span></span></li>
-        <li><span></span></li>
-   	</ul>
+<body style="overflow:-Scroll;overflow-x:hidden">
+<!--to_top鼠标跟随-->
+<div id="to_top"><img src="img/sb.png"></div>
+<!--header导航条-->
+<audio></audio>
+<div id="header">
+    <ul>
+        <audio></audio>
+        <li id="page"><a href="javascript:;">首页</a></li>
+        <li id="resume"><a href="javascript:;">个人简介</a></li>
+        <li id="appreciate"><a href="javascript:;">欣赏</a></li>
+        <li id="music">
+            <a href="javascript:;" >背景音乐</a>
+                <audio></audio>
+                <div id="leibiao">
+                    <p class="on">Almost Lover</p>
+                    <p>Faded</p>
+                    <p>Love Me Like You Do</p>
+                    <p>海阔天空-Beyond</p>
+                    <p>改变自己</p>
+                    <p>好心分手</p>
+                </div>
+        </li>
+        <li id="help">
+        	<a href="javascript:;">帮助</a>
+        	<div id="bangzhu">网站可能因为浏览器不同，显示的方式也会不一样，请谅解，请肆无忌惮的浏览网站吧!</div>
+        </li>
+        <li id="quit">
+            <a href="javascript:;" class="a1">退出</a>
+        </li>
+        <p id="gequ"></p><img src="img/zanting.png" id="bf"/>
+    </ul>
+</div>
+<!--遮罩层-->
+<div id="opc"></div>
+<!--退出-->
+<div id="tuichu">
+    <p class="TC">亲，确定要走吗^_^!!!</p>
+    <i class="Cha"></i>
+    <a href="javascript:;" class="a1"/>确定以及肯定</a>
+    <a href="javascript:;" class="a2">再看一会</a>
+</div>
+<!--header2吸顶条2-->
+<div id="header2"></div>
+<!--homepage主页羊-->
+<div id="homepage">
+	<h1>大黑羊</h1>
+    <div id="Slogan">
+    	<div class="Sl1"></div>
+        <p>
+        	<img src="img/0.png">
+            <img src="img/0.png">
+            <img src="img/p.png">
+            <img src="img/0.png">
+            <img src="img/0.png">
+            <img src="img/p.png">
+            <img src="img/0.png">
+            <img src="img/0.png">
+        </p>
+    </div>
+    <div id="down">
+        <i></i><br/>
+        <i></i><br/>
+        <i></i><br/>
+        <span title="点击往下滑，寻思啥那" id="down_btn"></span>
+    </div>
+</div>
+<!--content第二部分-->
+<div id="content">
+	<h2 id="jianli">
+    	<span>个人简历</span>
+		<span class="Ojiansp">个人简历</span>
+    </h2>
+    <div class="div1">
+    	<div class="div2 clearfix">
+    	<div class="div3 fl">
+        	<div class="fl" id="baozha"></div>
+      		<div class="div4">
+                <span title="点上面的羊"></span>
+            	<i></i>
+                <i></i>
+                <i></i>
+                <strong>点</strong>
+            </div>
+        </div>
+        <div class="div5">
+        	<p>姓&nbsp;&nbsp;名 : 杨硕</p>
+            <p>性&nbsp;&nbsp;别 : 女</p>
+            <p>专&nbsp;&nbsp;业 : 计算机网络技术</p>
+            <p>工作经验 : 应届毕业生</p>
+            <p>奖&nbsp;&nbsp;项 : 2016年"挑战杯——彩虹人生"  二等奖<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;全国职业学校创新创效创业大赛</p>
+            <p>专业技能 :</p>
+            	<ul>
+                	<li>熟练掌握Photoshop图片切割导出和基本修图</li>
+                	<li>掌握基本的原生javascript语言</li>
+                	<li>能够较好的使用jqurey框架</li>
+                	<li>导出熟练掌握Photoshop图片切割导出和基本修图</li>
+                	<li>导出熟练掌握Photoshop图片切割导出和基本修图</li>
+                </ul>
+            <p>岗位意向 : 前端开发</p>
+        </div>	
+        <span title="点击往下滑，寻思啥那" id="down_btn2"></span>
+    </div>
+    </div>
+</div>
+<!--look欣赏第三部分-->
+<div id="look">
+	<h2 id="jianli2">
+    	<span>欣赏</span>
+		<span class="Ojiansp">欣赏</span>
+    </h2>
+    <div class="div1"></div>
+    <div class="div2">
+    	<a href="javascript:;" id="aa" class="se">点</a><a href="javascript:;" id="bb">点</a><a href="javascript:;" id="cc">点</a>
+    </div>
+    <div id="chuanqiang">
+    	<ul class="ul1" style="display: block;">
+            <li class="li1"><a href="mi/code/小米.html">"点我看页面"，此刻加油！做一个好的前端开发工程师</a></li>
+            <li class="li2"><a href="aqy/code/爱奇艺.html">"点我看页面"，此刻加油！做一个好的前端开发工程师</a></li>
+            <li class="li3"><a href="360/360.html">"点我看页面"，此刻加油！做一个好的前端开发工程师</a></li>
+            <li class="li4"><a href="mls/美丽说征战.html">"点我看页面"，此刻加油！做一个好的前端开发工程师</a></li>
+            <li class="li5"><a href="oppo/oppo网站.html">"点我看页面"，此刻加油！做一个好的前端开发工程师</a></li>
+            <li class="li6"><a href="lhhx/code/灵魂回响.html">"点我看页面"，此刻加油！做一个好的前端开发工程师</a></li>
+        </ul>
+        <ul class="ul2">
+  			<!--正反左右上下-->
+            <li class="front">active</li>
+            <li class="back"></li>
+            <li class="left"></li>
+            <li class="right"></li>
+            <li class="top"></li>
+            <li class="bottom"></li>
+        </ul>
+        <ul class="ul3">
+            <li><img src="img2/1.png" /></li>
+            <li><img src="img2/2.png" /></li>
+            <li><img src="img2/3.png" /></li>
+            <li><img src="img2/4.png" /></li>
+            <li><img src="img2/5.png" /></li>
+            <li><img src="img2/6.png" /></li>
+            <li><img src="img2/7.png" /></li>
+            <li><img src="img2/8.png" /></li>
+            <li><img src="img2/9.png" /></li>
+            <li><img src="img2/10.png" /></li>
+            <li><img src="img2/11.png" /></li>
+        </ul>
+    </div>
+</div>
+<div id="foot" class="clearfix">
+	<div class="DB clearfix" id="DB">
+        <div class="div1 clearfix"><i></i>电话:17601622910&nbsp;&nbsp;|</div>
+        <div class="div2 clearfix"><i></i>微信:YS12140910&nbsp;&nbsp;|</div>
+        <div class="div3 clearfix"><i></i>新浪邮箱:0910yangshuo@sina.com</div>
+    </div>
+    <p>本站效果不是全面的，想要看更多点击登录我的<a href="https://yszdyu.github.io/">yszdyu.github.io</a>账号查看</p>
 </div>
 </body>
 </html>
