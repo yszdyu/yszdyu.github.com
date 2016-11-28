@@ -232,7 +232,9 @@ h1 {
   #content .div1 {
     width: 100%;
     border: 2px solid rgba(88, 64, 62, 0.90196);
-    margin-top: 15px; }
+    margin-top: 15px; 
+	height:482px;
+	}
   #content .div3 {
     height: 410px;
     width: 220px; }
@@ -296,7 +298,7 @@ h1 {
       margin-top: 7px; }
     #content .div5 ul {
       width: 440px;
-      margin-left: 142px; }
+      margin-left: 100px; }
       #content .div5 ul li {
         font-size: 20px;
         color: #FFF; }
